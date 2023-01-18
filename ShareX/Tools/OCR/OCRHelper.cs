@@ -109,7 +109,16 @@ namespace ShareX
 
                     if (singleLine)
                     {
-                        separator = " ";
+                        if (language.LanguageTag.StartsWith("zh", StringComparison.OrdinalIgnoreCase) || // Chinese
+                            language.LanguageTag.StartsWith("ja", StringComparison.OrdinalIgnoreCase) || // Japanese
+                            language.LanguageTag.StartsWith("ko", StringComparison.OrdinalIgnoreCase))   // Korean
+                        {
+                            separator = "";
+                        }
+                        else
+                        {
+                            separator = " ";
+                        }
                     }
                     else
                     {
