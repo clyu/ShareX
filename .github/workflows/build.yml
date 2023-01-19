@@ -32,7 +32,7 @@ jobs:
       ASSEMBLY_INFO_PATH: GlobalAssemblyInfo.cs
 
     outputs:
-      APP_VERSION: ${{ steps.get_app_version.outputs.APP_VERSION }}
+      APP_VERSION: ${{ env.APP_VERSION }}
 
     steps:
       - name: Checkout
@@ -41,8 +41,7 @@ jobs:
       - name: Add msbuild to PATH
         uses: microsoft/setup-msbuild@v1.1
 
-      - name: Get app version
-        id: get_app_version
+      - name: Set APP_VERSION
         run: |
           $content = Get-Content "${{ env.ASSEMBLY_INFO_PATH }}" -Raw
           $pattern = 'Version\("([0-9]+(?:\.[0-9]+){1,3})"\)'
@@ -54,7 +53,7 @@ jobs:
             Set-Content -Path "${{ env.ASSEMBLY_INFO_PATH }}" -Value "$content" -NoNewline
           }
           echo $version
-          echo "APP_VERSION=$version" >> $env:GITHUB_OUTPUT
+          echo "APP_VERSION=$version" >> $env:GITHUB_ENV
 
       - name: Download API keys
         env:
@@ -82,42 +81,42 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Setup
-          path: Output\ShareX-*-setup.exe
+          path: Output\ShareX-${{ env.APP_VERSION }}-setup.exe
 
       - name: Upload artifact (Portable)
         if: matrix.configuration == 'Release'
         uses: actions/upload-artifact@v3
         with:
           name: Portable
-          path: Output\ShareX-*-portable.zip
+          path: Output\ShareX-${{ env.APP_VERSION }}-portable.zip
 
       - name: Upload artifact (Debug)
         if: matrix.configuration == 'Debug'
         uses: actions/upload-artifact@v3
         with:
           name: Debug
-          path: Output\ShareX-*-debug.zip
+          path: Output\ShareX-${{ env.APP_VERSION }}-debug.zip
 
       - name: Upload artifact (Steam)
         if: matrix.configuration == 'Steam'
         uses: actions/upload-artifact@v3
         with:
           name: Steam
-          path: Output\ShareX-*-Steam.zip
+          path: Output\ShareX-${{ env.APP_VERSION }}-Steam.zip
 
       - name: Upload artifact (MicrosoftStore)
         if: matrix.configuration == 'MicrosoftStore'
         uses: actions/upload-artifact@v3
         with:
           name: MicrosoftStore
-          path: Output\ShareX-*.appx
+          path: Output\ShareX-${{ env.APP_VERSION }}.appx
 
       - name: Upload artifact (MicrosoftStoreDebug)
         if: matrix.configuration == 'MicrosoftStoreDebug'
         uses: actions/upload-artifact@v3
         with:
           name: MicrosoftStoreDebug
-          path: Output\ShareX-*-debug.appx
+          path: Output\ShareX-${{ env.APP_VERSION }}-debug.appx
 
   release:
     name: Release
@@ -183,7 +182,7 @@ jobs:
           $output = "| File | SHA256 |`r`n| --- | --- |`r`n$($checksums.Trim())"
           echo $output >> $env:GITHUB_STEP_SUMMARY
           if ($env:GITHUB_REF.StartsWith("refs/tags/v")) {
-            $output = "**Changelog:** https://getsharex.com/changelog`r`n`r`n$output"
+            $output = "**Changelog:** https://getsharex.com/changelog#$env:GITHUB_REF_NAME`r`n`r`n$output"
           }
           echo $output
           Set-Content -Path "${{ env.RELEASE_BODY_PATH }}" -Value "$output" -NoNewline
