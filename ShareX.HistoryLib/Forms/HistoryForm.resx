@@ -129,32 +129,6 @@
   <data name="&gt;&gt;tscHistory.BottomToolStripPanel.ZOrder" xml:space="preserve">
     <value>4</value>
   </data>
-  <data name="chIcon.Text" xml:space="preserve">
-    <value />
-    <comment>@Invariant</comment>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="chIcon.Width" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="chDateTime.Text" xml:space="preserve">
-    <value>Date</value>
-  </data>
-  <data name="chDateTime.Width" type="System.Int32, mscorlib">
-    <value>115</value>
-  </data>
-  <data name="chFilename.Text" xml:space="preserve">
-    <value>Filename</value>
-  </data>
-  <data name="chFilename.Width" type="System.Int32, mscorlib">
-    <value>170</value>
-  </data>
-  <data name="chURL.Text" xml:space="preserve">
-    <value>URL</value>
-  </data>
-  <data name="chURL.Width" type="System.Int32, mscorlib">
-    <value>230</value>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvHistory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -166,6 +140,7 @@
   <data name="lvHistory.Size" type="System.Drawing.Size, System.Drawing">
     <value>550, 636</value>
   </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="lvHistory.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
   </data>
@@ -173,7 +148,7 @@
     <value>lvHistory</value>
   </data>
   <data name="&gt;&gt;lvHistory.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=14.0.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=15.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvHistory.Parent" xml:space="preserve">
     <value>tscHistory.ContentPanel</value>
@@ -238,51 +213,6 @@
   <data name="tsHistory.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>None</value>
   </data>
-  <data name="tsHistory.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 0</value>
-  </data>
-  <data name="tsHistory.Size" type="System.Drawing.Size, System.Drawing">
-    <value>477, 25</value>
-  </data>
-  <data name="tsHistory.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tsHistory.Name" xml:space="preserve">
-    <value>tsHistory</value>
-  </data>
-  <data name="&gt;&gt;tsHistory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tsHistory.Parent" xml:space="preserve">
-    <value>tscHistory.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;tsHistory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.TopToolStripPanel.Name" xml:space="preserve">
-    <value>tscHistory.TopToolStripPanel</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.TopToolStripPanel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.TopToolStripPanel.Parent" xml:space="preserve">
-    <value>tscHistory</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.TopToolStripPanel.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.Name" xml:space="preserve">
-    <value>tscHistory</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.Parent" xml:space="preserve">
-    <value>scMain.Panel1</value>
-  </data>
-  <data name="&gt;&gt;tscHistory.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="tslSearch.Size" type="System.Drawing.Size, System.Drawing">
     <value>45, 22</value>
   </data>
@@ -345,6 +275,75 @@
   </data>
   <data name="tsbSettings.Text" xml:space="preserve">
     <value>Settings...</value>
+  </data>
+  <data name="tsHistory.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 0</value>
+  </data>
+  <data name="tsHistory.Size" type="System.Drawing.Size, System.Drawing">
+    <value>477, 25</value>
+  </data>
+  <data name="tsHistory.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tsHistory.Name" xml:space="preserve">
+    <value>tsHistory</value>
+  </data>
+  <data name="&gt;&gt;tsHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tsHistory.Parent" xml:space="preserve">
+    <value>tscHistory.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;tsHistory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.TopToolStripPanel.Name" xml:space="preserve">
+    <value>tscHistory.TopToolStripPanel</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.TopToolStripPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.TopToolStripPanel.Parent" xml:space="preserve">
+    <value>tscHistory</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.TopToolStripPanel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.Name" xml:space="preserve">
+    <value>tscHistory</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.Parent" xml:space="preserve">
+    <value>scMain.Panel1</value>
+  </data>
+  <data name="&gt;&gt;tscHistory.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="chIcon.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chIcon.Width" type="System.Int32, mscorlib">
+    <value>24</value>
+  </data>
+  <data name="chDateTime.Text" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="chDateTime.Width" type="System.Int32, mscorlib">
+    <value>115</value>
+  </data>
+  <data name="chFilename.Text" xml:space="preserve">
+    <value>Filename</value>
+  </data>
+  <data name="chFilename.Width" type="System.Int32, mscorlib">
+    <value>170</value>
+  </data>
+  <data name="chURL.Text" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="chURL.Width" type="System.Int32, mscorlib">
+    <value>230</value>
   </data>
   <data name="&gt;&gt;btnAdvancedSearchClose.Name" xml:space="preserve">
     <value>btnAdvancedSearchClose</value>
@@ -977,7 +976,7 @@
     <value>0, 0</value>
   </data>
   <data name="pbThumbnail.Size" type="System.Drawing.Size, System.Drawing">
-    <value>627, 424</value>
+    <value>627, 415</value>
   </data>
   <data name="pbThumbnail.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -986,7 +985,7 @@
     <value>pbThumbnail</value>
   </data>
   <data name="&gt;&gt;pbThumbnail.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MyPictureBox, ShareX.HelpersLib, Version=14.0.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MyPictureBox, ShareX.HelpersLib, Version=15.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;pbThumbnail.Parent" xml:space="preserve">
     <value>scHistoryItemInfo.Panel1</value>
@@ -1016,7 +1015,7 @@
     <value>0, 0</value>
   </data>
   <data name="pgHistoryItemInfo.Size" type="System.Drawing.Size, System.Drawing">
-    <value>627, 230</value>
+    <value>627, 239</value>
   </data>
   <data name="pgHistoryItemInfo.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -1049,7 +1048,7 @@
     <value>627, 661</value>
   </data>
   <data name="scHistoryItemInfo.SplitterDistance" type="System.Int32, mscorlib">
-    <value>424</value>
+    <value>415</value>
   </data>
   <data name="scHistoryItemInfo.SplitterWidth" type="System.Int32, mscorlib">
     <value>7</value>
@@ -1061,7 +1060,7 @@
     <value>scHistoryItemInfo</value>
   </data>
   <data name="&gt;&gt;scHistoryItemInfo.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.SplitContainerCustomSplitter, ShareX.HelpersLib, Version=14.0.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.SplitContainerCustomSplitter, ShareX.HelpersLib, Version=15.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;scHistoryItemInfo.Parent" xml:space="preserve">
     <value>scMain.Panel2</value>
@@ -1100,7 +1099,7 @@
     <value>scMain</value>
   </data>
   <data name="&gt;&gt;scMain.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.SplitContainerCustomSplitter, ShareX.HelpersLib, Version=14.0.2.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.SplitContainerCustomSplitter, ShareX.HelpersLib, Version=15.0.2.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;scMain.Parent" xml:space="preserve">
     <value>$this</value>

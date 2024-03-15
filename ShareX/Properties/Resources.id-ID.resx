@@ -266,9 +266,6 @@ Silakan pilih tombol cepat yang berbeda atau keluar dari aplikasi yang bertentan
   <data name="AboutForm_AboutForm_Language_ko_KR" xml:space="preserve">
     <value>Bahasa Korea</value>
   </data>
-  <data name="HotkeyManager_ShowFailedHotkeys_These_applications_could_be_conflicting_" xml:space="preserve">
-    <value>Mungkin ada konflik aplikasi:</value>
-  </data>
   <data name="ActionsToolbarEditForm_Separator" xml:space="preserve">
     <value>Pemisah</value>
   </data>
@@ -361,9 +358,6 @@ Apakah Anda ingin memulai ulang ShareX?</value>
   </data>
   <data name="ApplicationSettingsForm_btnBrowseCustomScreenshotsPath_Click_Choose_screenshots_folder_path" xml:space="preserve">
     <value>Pilih jalur folder screenshot</value>
-  </data>
-  <data name="MainForm_UpdateMainFormTip_Currently_configured_hotkeys_" xml:space="preserve">
-    <value>Tombol cepat yang dikonfigurasi saat ini:</value>
   </data>
   <data name="RecentManager_UpdateRecentMenu_Left_click_to_copy_URL_to_clipboard__Right_click_to_open_URL_" xml:space="preserve">
     <value>Klik kiri untuk menyalin URL ke papan klip. Klik kanan untuk membuka URL.</value>

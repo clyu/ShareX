@@ -301,9 +301,6 @@ Doriți să reporniți ShareX?</value>
   <data name="Confirmation" xml:space="preserve">
     <value>Confirmare</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Descriere</value>
-  </data>
   <data name="DropForm_DrawDropImage_Drop_here" xml:space="preserve">
     <value>Trageți
 aici</value>
@@ -323,9 +320,6 @@ aici</value>
   <data name="FileExistForm_txtNewName_TextChanged_Use_new_name__" xml:space="preserve">
     <value>Utilizați nume nou: </value>
   </data>
-  <data name="Hotkey" xml:space="preserve">
-    <value>Tasta rapidă</value>
-  </data>
   <data name="HotkeyManager_ShowFailedHotkeys_hotkey" xml:space="preserve">
     <value>tastă rapidă</value>
   </data>
@@ -334,9 +328,6 @@ aici</value>
   </data>
   <data name="HotkeyManager_ShowFailedHotkeys_hotkeys" xml:space="preserve">
     <value>taste rapide</value>
-  </data>
-  <data name="HotkeyManager_ShowFailedHotkeys_These_applications_could_be_conflicting_" xml:space="preserve">
-    <value>Este posibil să existe un conflict între aplicații:</value>
   </data>
   <data name="HotkeyManager_ShowFailedHotkeys_Unable_to_register_hotkey" xml:space="preserve">
     <value>Nu se poate înregistra {0}:
@@ -398,9 +389,6 @@ Vă rugăm să selectați o altă tastatură rapidă sau să ieșiți din aplica
   </data>
   <data name="MainForm_tsmiTestTextUpload_Click_Text_upload_test" xml:space="preserve">
     <value>Test de încărcare text</value>
-  </data>
-  <data name="MainForm_UpdateMainFormTip_Currently_configured_hotkeys_" xml:space="preserve">
-    <value>Taste rapide configurate în prezent:</value>
   </data>
   <data name="MainForm_UpdateToggleHotkeyButton_Disable_hotkeys" xml:space="preserve">
     <value>Dezactivați tastele rapide</value>

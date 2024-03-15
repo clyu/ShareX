@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -46,7 +46,7 @@ namespace ShareX
         public TaskSettingsForm(TaskSettings hotkeySetting, bool isDefault = false)
         {
             InitializeComponent();
-            ShareXResources.ApplyTheme(this);
+            ShareXResources.ApplyTheme(this, true);
 
             tsmiURLShorteners.Image = ShareXResources.IsDarkTheme ? Resources.edit_scale_white : Resources.edit_scale;
 
@@ -248,6 +248,7 @@ namespace ShareX
 
             cbShowImageEffectsWindowAfterCapture.Checked = TaskSettings.ImageSettings.ShowImageEffectsWindowAfterCapture;
             cbImageEffectOnlyRegionCapture.Checked = TaskSettings.ImageSettings.ImageEffectOnlyRegionCapture;
+            cbUseRandomImageEffect.Checked = TaskSettings.ImageSettings.UseRandomImageEffect;
 
             #endregion Effects
 
@@ -279,6 +280,7 @@ namespace ShareX
             nudCaptureCustomRegionY.SetValue(TaskSettings.CaptureSettings.CaptureCustomRegion.Y);
             nudCaptureCustomRegionWidth.SetValue(TaskSettings.CaptureSettings.CaptureCustomRegion.Width);
             nudCaptureCustomRegionHeight.SetValue(TaskSettings.CaptureSettings.CaptureCustomRegion.Height);
+            txtCaptureCustomWindow.Text = TaskSettings.CaptureSettings.CaptureCustomWindow;
 
             #endregion General
 
@@ -325,6 +327,12 @@ namespace ShareX
             #endregion Region capture
 
             #region Screen recorder
+
+            if (HelpersOptions.DevMode)
+            {
+                nudScreenRecordFPS.Maximum = 300;
+                nudGIFFPS.Maximum = 60;
+            }
 
             nudScreenRecordFPS.SetValue(TaskSettings.CaptureSettings.ScreenRecordFPS);
             nudGIFFPS.SetValue(TaskSettings.CaptureSettings.GIFFPS);
@@ -380,6 +388,7 @@ namespace ShareX
             cbCaptureOCRSilent.Checked = ocrOptions.Silent;
             cbCaptureOCRAutoCopy.Enabled = !ocrOptions.Silent;
             cbCaptureOCRAutoCopy.Checked = ocrOptions.AutoCopy;
+            cbCloseWindowAfterOpenServiceLink.Checked = ocrOptions.CloseWindowAfterOpeningServiceLink;
 
             #endregion OCR
 
@@ -979,14 +988,19 @@ namespace ShareX
             TaskSettings.ImageSettings.FileExistAction = (FileExistAction)cbImageFileExist.SelectedIndex;
         }
 
+        private void cbShowImageEffectsWindowAfterCapture_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.ImageSettings.ShowImageEffectsWindowAfterCapture = cbShowImageEffectsWindowAfterCapture.Checked;
+        }
+
         private void cbImageEffectOnlyRegionCapture_CheckedChanged(object sender, EventArgs e)
         {
             TaskSettings.ImageSettings.ImageEffectOnlyRegionCapture = cbImageEffectOnlyRegionCapture.Checked;
         }
 
-        private void cbShowImageEffectsWindowAfterCapture_CheckedChanged(object sender, EventArgs e)
+        private void cbUseRandomImageEffect_CheckedChanged(object sender, EventArgs e)
         {
-            TaskSettings.ImageSettings.ShowImageEffectsWindowAfterCapture = cbShowImageEffectsWindowAfterCapture.Checked;
+            TaskSettings.ImageSettings.UseRandomImageEffect = cbUseRandomImageEffect.Checked;
         }
 
         private void btnImageEffects_Click(object sender, EventArgs e)
@@ -1092,6 +1106,11 @@ namespace ShareX
                 nudCaptureCustomRegionWidth.SetValue(rect.Width);
                 nudCaptureCustomRegionHeight.SetValue(rect.Height);
             }
+        }
+
+        private void txtCaptureCustomWindow_TextChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.CaptureCustomWindow = txtCaptureCustomWindow.Text;
         }
 
         #endregion General
@@ -1354,6 +1373,11 @@ namespace ShareX
             TaskSettings.CaptureSettings.OCROptions.AutoCopy = cbCaptureOCRAutoCopy.Checked;
         }
 
+        private void cbCloseWindowAfterOpenServiceLink_CheckedChanged(object sender, EventArgs e)
+        {
+            TaskSettings.CaptureSettings.OCROptions.CloseWindowAfterOpeningServiceLink = cbCloseWindowAfterOpenServiceLink.Checked;
+        }
+
         #endregion OCR
 
         #endregion Capture
@@ -1365,8 +1389,6 @@ namespace ShareX
             NameParser nameParser = new NameParser(NameParserType.FileName)
             {
                 AutoIncrementNumber = Program.Settings.NameParserAutoIncrementNumber,
-                WindowText = Text,
-                ProcessName = "ShareX",
                 ImageWidth = 1920,
                 ImageHeight = 1080,
                 MaxNameLength = TaskSettings.AdvancedSettings.NamePatternMaxLength,
@@ -1377,6 +1399,9 @@ namespace ShareX
 
             lblNameFormatPatternPreview.Text = Resources.TaskSettingsForm_txtNameFormatPatternActiveWindow_TextChanged_Preview_ + " " +
                 nameParser.Parse(TaskSettings.UploadSettings.NameFormatPattern);
+
+            nameParser.WindowText = Text;
+            nameParser.ProcessName = "ShareX";
 
             lblNameFormatPatternPreviewActiveWindow.Text = Resources.TaskSettingsForm_txtNameFormatPatternActiveWindow_TextChanged_Preview_ + " " +
                 nameParser.Parse(TaskSettings.UploadSettings.NameFormatPatternActiveWindow);

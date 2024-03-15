@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -335,10 +335,14 @@ namespace ShareX.ScreenCaptureLib
 
                 Task.Run(() =>
                 {
-                    WindowsRectangleList wla = new WindowsRectangleList();
-                    wla.IgnoreHandle = handle;
-                    wla.IncludeChildWindows = ShapeManager.IncludeControls;
-                    ShapeManager.Windows = wla.GetWindowInfoListAsync(5000);
+                    WindowsRectangleList wla = new WindowsRectangleList()
+                    {
+                        IgnoreHandle = handle,
+                        IncludeChildWindows = ShapeManager.IncludeControls,
+                        Timeout = 5000
+                    };
+
+                    ShapeManager.Windows = wla.GetWindowInfoList();
                 });
             }
         }
@@ -605,8 +609,15 @@ namespace ShareX.ScreenCaptureLib
             if (IsImageModified)
             {
                 Pause();
-                result = MessageBox.Show(this, Resources.RegionCaptureForm_ShowExitConfirmation_Text, Resources.RegionCaptureForm_ShowExitConfirmation_ShareXImageEditor,
-                    MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+                DialogResult dialogResult = MessageBox.Show(this, Resources.RegionCaptureForm_SaveChangesBeforeClosingEditor, Resources.RegionCaptureForm_ShowExitConfirmation_ShareXImageEditor,
+                    MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+
+                if (dialogResult == DialogResult.Yes)
+                {
+                    OnSaveImageRequested();
+                }
+
+                result = dialogResult != DialogResult.Cancel;
                 Resume();
             }
 
@@ -654,9 +665,6 @@ namespace ShareX.ScreenCaptureLib
                 case Keys.Oemtilde:
                     CloseWindow(RegionResult.ActiveMonitor);
                     break;
-                case Keys.Control | Keys.C:
-                    CopyAreaInfo();
-                    break;
             }
 
             if (IsEditorMode)
@@ -684,7 +692,11 @@ namespace ShareX.ScreenCaptureLib
             }
             else
             {
-                if (e.KeyData >= Keys.D0 && e.KeyData <= Keys.D9)
+                if (e.KeyData == (Keys.Control | Keys.C))
+                {
+                    CopyAreaInfo();
+                }
+                else if (e.KeyData >= Keys.D0 && e.KeyData <= Keys.D9)
                 {
                     MonitorKey(e.KeyData - Keys.D0);
                     return;
@@ -1219,7 +1231,7 @@ namespace ShareX.ScreenCaptureLib
         {
             if (IsEditorMode)
             {
-                PointF canvasRelativePosition = new PointF(ScaledClientMousePosition.X - CanvasRectangle.X, ScaledClientMousePosition.Y - CanvasRectangle.Y);
+                Point canvasRelativePosition = new PointF(ScaledClientMousePosition.X - CanvasRectangle.X, ScaledClientMousePosition.Y - CanvasRectangle.Y).Round();
                 return $"X: {canvasRelativePosition.X} Y: {canvasRelativePosition.Y}";
             }
             else if (Mode == RegionCaptureMode.ScreenColorPicker || Options.UseCustomInfoText)
@@ -1574,6 +1586,39 @@ namespace ShareX.ScreenCaptureLib
             }
 
             return bmp;
+        }
+
+        public Rectangle GetSelectedRectangle()
+        {
+            Rectangle rect = Rectangle.Empty;
+
+            if (Result == RegionResult.Region)
+            {
+                if (ShapeManager.IsCurrentShapeValid)
+                {
+                    rect = CaptureHelpers.ClientToScreen(ShapeManager.CurrentRectangle.Round());
+                }
+            }
+            else if (Result == RegionResult.Fullscreen)
+            {
+                rect = CaptureHelpers.GetScreenBounds();
+            }
+            else if (Result == RegionResult.Monitor)
+            {
+                Screen[] screens = Screen.AllScreens;
+
+                if (MonitorIndex < screens.Length)
+                {
+                    Screen screen = screens[MonitorIndex];
+                    rect = screen.Bounds;
+                }
+            }
+            else if (Result == RegionResult.ActiveMonitor)
+            {
+                rect = CaptureHelpers.GetActiveScreenBounds();
+            }
+
+            return rect;
         }
 
         internal void OnSaveImageRequested()

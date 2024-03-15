@@ -118,6 +118,7 @@
             this.cbImageGIFQuality = new System.Windows.Forms.ComboBox();
             this.cbOverrideImageSettings = new System.Windows.Forms.CheckBox();
             this.tpEffects = new System.Windows.Forms.TabPage();
+            this.cbUseRandomImageEffect = new System.Windows.Forms.CheckBox();
             this.lblImageEffectsNote = new System.Windows.Forms.Label();
             this.cbShowImageEffectsWindowAfterCapture = new System.Windows.Forms.CheckBox();
             this.cbImageEffectOnlyRegionCapture = new System.Windows.Forms.CheckBox();
@@ -135,6 +136,8 @@
             this.tcCapture = new System.Windows.Forms.TabControl();
             this.tpCaptureGeneral = new System.Windows.Forms.TabPage();
             this.pCapture = new System.Windows.Forms.Panel();
+            this.txtCaptureCustomWindow = new System.Windows.Forms.TextBox();
+            this.lblCaptureCustomWindow = new System.Windows.Forms.Label();
             this.lblScreenshotDelay = new System.Windows.Forms.Label();
             this.btnCaptureCustomRegionSelectRectangle = new System.Windows.Forms.Button();
             this.lblCaptureCustomRegion = new System.Windows.Forms.Label();
@@ -219,6 +222,7 @@
             this.tpOCR = new System.Windows.Forms.TabPage();
             this.btnCaptureOCRHelp = new System.Windows.Forms.Button();
             this.cbCaptureOCRAutoCopy = new System.Windows.Forms.CheckBox();
+            this.cbCloseWindowAfterOpenServiceLink = new System.Windows.Forms.CheckBox();
             this.cbCaptureOCRSilent = new System.Windows.Forms.CheckBox();
             this.lblOCRDefaultLanguage = new System.Windows.Forms.Label();
             this.cbCaptureOCRDefaultLanguage = new System.Windows.Forms.ComboBox();
@@ -1071,12 +1075,20 @@
             // tpEffects
             // 
             this.tpEffects.BackColor = System.Drawing.SystemColors.Window;
+            this.tpEffects.Controls.Add(this.cbUseRandomImageEffect);
             this.tpEffects.Controls.Add(this.lblImageEffectsNote);
             this.tpEffects.Controls.Add(this.cbShowImageEffectsWindowAfterCapture);
             this.tpEffects.Controls.Add(this.cbImageEffectOnlyRegionCapture);
             this.tpEffects.Controls.Add(this.btnImageEffects);
             resources.ApplyResources(this.tpEffects, "tpEffects");
             this.tpEffects.Name = "tpEffects";
+            // 
+            // cbUseRandomImageEffect
+            // 
+            resources.ApplyResources(this.cbUseRandomImageEffect, "cbUseRandomImageEffect");
+            this.cbUseRandomImageEffect.Name = "cbUseRandomImageEffect";
+            this.cbUseRandomImageEffect.UseVisualStyleBackColor = true;
+            this.cbUseRandomImageEffect.CheckedChanged += new System.EventHandler(this.cbUseRandomImageEffect_CheckedChanged);
             // 
             // lblImageEffectsNote
             // 
@@ -1200,6 +1212,8 @@
             // 
             // pCapture
             // 
+            this.pCapture.Controls.Add(this.txtCaptureCustomWindow);
+            this.pCapture.Controls.Add(this.lblCaptureCustomWindow);
             this.pCapture.Controls.Add(this.lblScreenshotDelay);
             this.pCapture.Controls.Add(this.btnCaptureCustomRegionSelectRectangle);
             this.pCapture.Controls.Add(this.lblCaptureCustomRegion);
@@ -1222,6 +1236,17 @@
             this.pCapture.Controls.Add(this.nudCaptureShadowOffset);
             resources.ApplyResources(this.pCapture, "pCapture");
             this.pCapture.Name = "pCapture";
+            // 
+            // txtCaptureCustomWindow
+            // 
+            resources.ApplyResources(this.txtCaptureCustomWindow, "txtCaptureCustomWindow");
+            this.txtCaptureCustomWindow.Name = "txtCaptureCustomWindow";
+            this.txtCaptureCustomWindow.TextChanged += new System.EventHandler(this.txtCaptureCustomWindow_TextChanged);
+            // 
+            // lblCaptureCustomWindow
+            // 
+            resources.ApplyResources(this.lblCaptureCustomWindow, "lblCaptureCustomWindow");
+            this.lblCaptureCustomWindow.Name = "lblCaptureCustomWindow";
             // 
             // lblScreenshotDelay
             // 
@@ -1988,6 +2013,7 @@
             // 
             this.tpOCR.Controls.Add(this.btnCaptureOCRHelp);
             this.tpOCR.Controls.Add(this.cbCaptureOCRAutoCopy);
+            this.tpOCR.Controls.Add(this.cbCloseWindowAfterOpenServiceLink);
             this.tpOCR.Controls.Add(this.cbCaptureOCRSilent);
             this.tpOCR.Controls.Add(this.lblOCRDefaultLanguage);
             this.tpOCR.Controls.Add(this.cbCaptureOCRDefaultLanguage);
@@ -2009,6 +2035,13 @@
             this.cbCaptureOCRAutoCopy.Name = "cbCaptureOCRAutoCopy";
             this.cbCaptureOCRAutoCopy.UseVisualStyleBackColor = true;
             this.cbCaptureOCRAutoCopy.CheckedChanged += new System.EventHandler(this.cbCaptureOCRAutoCopy_CheckedChanged);
+            // 
+            // cbCloseWindowAfterOpenServiceLink
+            // 
+            resources.ApplyResources(this.cbCloseWindowAfterOpenServiceLink, "cbCloseWindowAfterOpenServiceLink");
+            this.cbCloseWindowAfterOpenServiceLink.Name = "cbCloseWindowAfterOpenServiceLink";
+            this.cbCloseWindowAfterOpenServiceLink.UseVisualStyleBackColor = true;
+            this.cbCloseWindowAfterOpenServiceLink.CheckedChanged += new System.EventHandler(this.cbCloseWindowAfterOpenServiceLink_CheckedChanged);
             // 
             // cbCaptureOCRSilent
             // 
@@ -2903,6 +2936,7 @@
         private System.Windows.Forms.ComboBox cbCaptureOCRDefaultLanguage;
         private System.Windows.Forms.CheckBox cbCaptureOCRSilent;
         private System.Windows.Forms.CheckBox cbCaptureOCRAutoCopy;
+        private System.Windows.Forms.CheckBox cbCloseWindowAfterOpenServiceLink;
         private System.Windows.Forms.Label lblScreenshotDelay;
         private System.Windows.Forms.Label lblAutoIncrementNumber;
         private System.Windows.Forms.NumericUpDown nudAutoIncrementNumber;
@@ -2963,5 +2997,8 @@
         private System.Windows.Forms.Label lblRegionCaptureFPSLimit;
         private System.Windows.Forms.CheckBox cbRegionCaptureActiveMonitorMode;
         private System.Windows.Forms.Button btnCaptureOCRHelp;
+        private System.Windows.Forms.CheckBox cbUseRandomImageEffect;
+        private System.Windows.Forms.Label lblCaptureCustomWindow;
+        private System.Windows.Forms.TextBox txtCaptureCustomWindow;
     }
 }

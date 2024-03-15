@@ -200,9 +200,6 @@ Bạn có muốn khởi động lại ShareX không?</value>
   <data name="Program_Run_Unable_to_create_folder_" xml:space="preserve">
     <value>Không thể tạo thư mục mới:</value>
   </data>
-  <data name="MainForm_UpdateMainFormTip_Currently_configured_hotkeys_" xml:space="preserve">
-    <value>Các phím tắt đang được thiết lập:</value>
-  </data>
   <data name="RecentManager_UpdateRecentMenu_Left_click_to_copy_URL_to_clipboard__Right_click_to_open_URL_" xml:space="preserve">
     <value>Chuột trái để sao chép URL vào vùng nhớ tạm. Chuột phải để mở URL.</value>
   </data>
@@ -457,9 +454,6 @@ Nhấn "Không" để hủy tiến trình tải lên hiện tại và tắt ch�
   <data name="ApplicationSettingsForm_cbStartWithWindows_DisabledByUser_Text" xml:space="preserve">
     <value>Tự khởi động đã bị vô hiệu trong Task Manager</value>
   </data>
-  <data name="HotkeyManager_ShowFailedHotkeys_These_applications_could_be_conflicting_" xml:space="preserve">
-    <value>Có thể đã có mâu thuẫn với một ứng dụng:</value>
-  </data>
   <data name="ActionsToolbar_Tip" xml:space="preserve">
     <value>Nhấn chuột trái để kéo
 Nhấn chuột phải để mở menu
@@ -557,9 +551,6 @@ Bạn có muốn khởi động lại ShareX?</value>
   <data name="Confirmation" xml:space="preserve">
     <value>Xác nhận</value>
   </data>
-  <data name="Description" xml:space="preserve">
-    <value>Mô tả</value>
-  </data>
   <data name="Error" xml:space="preserve">
     <value>Lỗi</value>
   </data>
@@ -580,9 +571,6 @@ Bạn có muốn khởi động lại ShareX?</value>
   </data>
   <data name="FFmpegOnlySupports64BitOperatingSystems" xml:space="preserve">
     <value>FFmpeg đi kèm với ShareX chỉ hỗ trợ hệ điều hành 64-bit.</value>
-  </data>
-  <data name="Hotkey" xml:space="preserve">
-    <value>Phím tắt</value>
   </data>
   <data name="ImageData_Write_Error_Message" xml:space="preserve">
     <value>Không thể ghi hình ảnh vào đường dẫn:</value>

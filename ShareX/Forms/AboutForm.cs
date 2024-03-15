@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -41,7 +41,7 @@ namespace ShareX
             InitializeComponent();
             lblProductName.Text = Program.Title;
             pbLogo.Image = ShareXResources.Logo;
-            ShareXResources.ApplyTheme(this);
+            ShareXResources.ApplyTheme(this, true);
 
 #if STEAM
             uclUpdate.Visible = false;
@@ -97,6 +97,7 @@ McoreD: {Links.McoreD}
 {Resources.AboutForm_AboutForm_Language_ja_JP}: https://github.com/kanaxx
 {Resources.AboutForm_AboutForm_Language_ro}: https://github.com/Edward205
 {Resources.AboutForm_AboutForm_Language_pl}: https://github.com/RikoDEV
+{Resources.AboutForm_AboutForm_Language_he_IL}: https://github.com/erelado
 ", FontStyle.Regular);
 
             rtbInfo.AppendLine(Resources.AboutForm_AboutForm_Credits, FontStyle.Bold, 13);
@@ -107,14 +108,13 @@ ImageListView: https://github.com/oozcitak/imagelistview
 FFmpeg: https://www.ffmpeg.org
 Recorder devices: https://github.com/rdp/screen-capture-recorder-to-video-windows-free
 FluentFTP: https://github.com/robinrodricks/FluentFTP
-Steamworks.NET: https://github.com/rlabrecque/Steamworks.NET
 ZXing.Net: https://github.com/micjahn/ZXing.Net
 MegaApiClient: https://github.com/gpailler/MegaApiClient
 Inno Setup Dependency Installer: https://github.com/DomGries/InnoDependencyInstaller
 Blob Emoji: http://blobs.gg
 ", FontStyle.Regular);
 
-            rtbInfo.AppendText("Copyright (c) 2007-2023 ShareX Team", FontStyle.Bold, 13);
+            rtbInfo.AppendText("Copyright (c) 2007-2024 ShareX Team", FontStyle.Bold, 13);
 
             easterEgg = new EasterEggAboutAnimation(cLogo, this);
         }
@@ -153,6 +153,7 @@ Blob Emoji: http://blobs.gg
 
         private void btnClose_Click(object sender, EventArgs e)
         {
+            DialogResult = DialogResult.Cancel;
             Close();
         }
     }

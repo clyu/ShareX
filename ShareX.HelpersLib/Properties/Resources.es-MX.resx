@@ -126,9 +126,6 @@
   <data name="ExportImportControl_tsmiExportClipboard_Click_Settings_copied_to_your_clipboard_" xml:space="preserve">
     <value>Configuración copiada al portapapeles.</value>
   </data>
-  <data name="HotkeyType_DNSChanger_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
   <data name="ImgurThumbnailType_Big_Square" xml:space="preserve">
     <value>Cuadro grande</value>
   </data>
@@ -162,12 +159,6 @@
   <data name="CustomUploaderDestinationType_URLShortener" xml:space="preserve">
     <value>Acortador de enlaces</value>
   </data>
-  <data name="HotkeyType_ScreenColorPicker_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_OpenImageHistory_Category" xml:space="preserve">
-    <value>Otro</value>
-  </data>
   <data name="ReplCodeMenuEntry_uln_User_login_name" xml:space="preserve">
     <value>Nombre de acceso</value>
   </data>
@@ -189,7 +180,7 @@
   <data name="ProxyMethod_None" xml:space="preserve">
     <value>Ninguno</value>
   </data>
-  <data name="HotkeyType_ScreenRecorder_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_ScreenRecord" xml:space="preserve">
     <value>Grabación de pantalla</value>
   </data>
   <data name="MyMessageBox_MyMessageBox_No" xml:space="preserve">
@@ -231,23 +222,14 @@
   <data name="ShapeType_RegionRectangle" xml:space="preserve">
     <value>Rectángulo</value>
   </data>
-  <data name="HotkeyType_FolderUpload_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Prueba de pantalla</value>
-  </data>
-  <data name="HotkeyType_QRCode_Category" xml:space="preserve">
-    <value>Herramientas</value>
   </data>
   <data name="ReplCodeMenuCategory_Date_and_Time" xml:space="preserve">
     <value>Fecha y hora</value>
   </data>
   <data name="HotkeyType_ImageCombiner" xml:space="preserve">
     <value>Acoplador de imágenes</value>
-  </data>
-  <data name="HotkeyType_MonitorTest_Category" xml:space="preserve">
-    <value>Herramientas</value>
   </data>
   <data name="HotkeyType_RectangleTransparent" xml:space="preserve">
     <value>Capturar región (transparente)</value>
@@ -257,12 +239,6 @@
   </data>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Servidor de archivos</value>
-  </data>
-  <data name="HotkeyType_DisableHotkeys_Category" xml:space="preserve">
-    <value>Otro</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_All" xml:space="preserve">
-    <value>Presionar "Inicio" para simular primero, luego mandar mensaje de desplazamiento superior</value>
   </data>
   <data name="UpdateCheckerLabel_UpdateControls_Update_check_failed" xml:space="preserve">
     <value>La comprobación de actualizaciones falló</value>
@@ -294,10 +270,7 @@
   <data name="UpdateMessageBox_UpdateMessageBox_update_is_available" xml:space="preserve">
     <value>Actualización disponible</value>
   </data>
-  <data name="HotkeyType_CaptureWebpage_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_FileUpload_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Upload" xml:space="preserve">
     <value>Subir</value>
   </data>
   <data name="DNSChangerForm_btnSave_Click_Setting_DNS_failed_with_error_code_" xml:space="preserve">
@@ -306,14 +279,8 @@
   <data name="Extensions_AddContextMenu_Cut" xml:space="preserve">
     <value>Cortar</value>
   </data>
-  <data name="HotkeyType_StartScreenRecorderGIF_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
   <data name="FileExistAction_Cancel" xml:space="preserve">
     <value>No guardar</value>
-  </data>
-  <data name="HotkeyType_IndexFolder_Category" xml:space="preserve">
-    <value>Herramientas</value>
   </data>
   <data name="AfterCaptureTasks_CopyImageToClipboard" xml:space="preserve">
     <value>Copiar imagen al portapapeles</value>
@@ -385,9 +352,6 @@
   </data>
   <data name="PNGBitDepth_Automatic" xml:space="preserve">
     <value>Detectar automáticamente</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_Automatic" xml:space="preserve">
-    <value>Probar con todos los métodos hasta que uno funcione</value>
   </data>
   <data name="LinearGradientMode_BackwardDiagonal" xml:space="preserve">
     <value>Diagonal inversa</value>
@@ -511,9 +475,6 @@
   </data>
   <data name="AfterCaptureTasks_DeleteFile" xml:space="preserve">
     <value>Eliminar archivo localmente</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_None" xml:space="preserve">
-    <value>Deshabilitar desplazamiento superior</value>
   </data>
   <data name="HotkeyType_DisableHotkeys" xml:space="preserve">
     <value>Habilitar o deshabilitar atajos de teclado</value>
@@ -778,59 +739,20 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   <data name="GIFQuality_Grayscale" xml:space="preserve">
     <value>Cuantificador de paleta de 256 niveles de gris</value>
   </data>
-  <data name="HotkeyType_AbortScreenRecording_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
-  <data name="HotkeyType_ActiveMonitor_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_ActiveWindow_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_AutoCapture_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
   <data name="HotkeyType_CaptureWebpage" xml:space="preserve">
     <value>Capturar página web</value>
   </data>
   <data name="HotkeyType_ClipboardUpload" xml:space="preserve">
     <value>Subir desde el portapapeles</value>
   </data>
-  <data name="HotkeyType_ClipboardUpload_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
   <data name="HotkeyType_ClipboardUploadWithContentViewer" xml:space="preserve">
     <value>Subir desde el portapapeles con visor de contenido</value>
   </data>
-  <data name="HotkeyType_ClipboardUploadWithContentViewer_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
-  <data name="HotkeyType_ColorPicker_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Tools" xml:space="preserve">
     <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_CustomRegion_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_DragDropUpload_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
-  <data name="HotkeyType_ExitShareX_Category" xml:space="preserve">
-    <value>Otro</value>
   </data>
   <data name="HotkeyType_FileUpload" xml:space="preserve">
     <value>Subir archivo</value>
-  </data>
-  <data name="HotkeyType_HashCheck_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_ImageCombiner_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_ImageEditor_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_ImageEffects_Category" xml:space="preserve">
-    <value>Herramientas</value>
   </data>
   <data name="HotkeyType_ImageEditor" xml:space="preserve">
     <value>Editor de imágenes</value>
@@ -844,32 +766,20 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   <data name="HotkeyType_OpenHistory" xml:space="preserve">
     <value>Abrir ventana de historial</value>
   </data>
-  <data name="HotkeyType_OpenHistory_Category" xml:space="preserve">
-    <value>Otro</value>
-  </data>
   <data name="HotkeyType_OpenImageHistory" xml:space="preserve">
     <value>Abrir ventana de historial de imagen</value>
   </data>
   <data name="HotkeyType_OpenMainWindow" xml:space="preserve">
     <value>Abrir ventana principal</value>
   </data>
-  <data name="HotkeyType_OpenMainWindow_Category" xml:space="preserve">
-    <value>Otro</value>
-  </data>
   <data name="HotkeyType_OpenScreenshotsFolder" xml:space="preserve">
     <value>Abrir carpeta de capturas de pantalla</value>
   </data>
-  <data name="HotkeyType_OpenScreenshotsFolder_Category" xml:space="preserve">
-    <value>Otro</value>
-  </data>
-  <data name="HotkeyType_PrintScreen_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_ScreenCapture" xml:space="preserve">
     <value>Capturar pantalla</value>
   </data>
   <data name="HotkeyType_QRCode" xml:space="preserve">
     <value>Código QR</value>
-  </data>
-  <data name="HotkeyType_RectangleLight_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
   </data>
   <data name="HSB_ToString_" xml:space="preserve">
     <value>Tono: {0:0.0}°, Saturación: {1:0.0} %, Brillo: {2:0.0} %</value>
@@ -925,15 +835,6 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   <data name="MyPictureBox_LoadImageAsync_Loading_image___" xml:space="preserve">
     <value>Cargando imagen...</value>
   </data>
-  <data name="PopUpNotificationType_BalloonTip" xml:space="preserve">
-    <value>Mostrar consejos en el área de notificación</value>
-  </data>
-  <data name="PopUpNotificationType_None" xml:space="preserve">
-    <value>No mostrar nada</value>
-  </data>
-  <data name="PopUpNotificationType_ToastNotification" xml:space="preserve">
-    <value>Mostrar notificación del sistema con vista previa</value>
-  </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>Imprimir</value>
   </data>
@@ -964,29 +865,11 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   <data name="ScreenRecordGIFEncoding_OctreeQuantizer" xml:space="preserve">
     <value>Cuantificador Octree (calidad media)</value>
   </data>
-  <data name="ScrollingCaptureScrollMethod_KeyPressPageDown" xml:space="preserve">
-    <value>Simular acción de tecla "Av Pág"</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_MouseWheel" xml:space="preserve">
-    <value>Simular acción de giro de rueda del ratón</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_SendMessageScroll" xml:space="preserve">
-    <value>Enviar mensaje de desplazamiento la venta o control</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_KeyPressHome" xml:space="preserve">
-    <value>Simular acción de tecla "Inicio"</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_SendMessageTop" xml:space="preserve">
-    <value>Enviar mensaje de desplazamiento superior</value>
-  </data>
   <data name="ShapeType_RegionEllipse" xml:space="preserve">
     <value>Elipse</value>
   </data>
   <data name="ShapeType_ToolCrop" xml:space="preserve">
     <value>Recortar (C)</value>
-  </data>
-  <data name="Start" xml:space="preserve">
-    <value>Iniciar</value>
   </data>
   <data name="YouTubeVideoPrivacy_Public" xml:space="preserve">
     <value>Público</value>
@@ -994,50 +877,14 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   <data name="YouTubeVideoPrivacy_Unlisted" xml:space="preserve">
     <value>Sin listar</value>
   </data>
-  <data name="HotkeyType_RectangleRegion_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_RectangleTransparent_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_ScrollingCapture_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_StartAutoCapture_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_ToggleActionsToolbar_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Other" xml:space="preserve">
     <value>Otro</value>
   </data>
   <data name="HotkeyType_Ruler" xml:space="preserve">
     <value>Regla</value>
   </data>
-  <data name="HotkeyType_WindowRectangle_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
-  <data name="HotkeyType_LastRegion_Category" xml:space="preserve">
-    <value>Capturar pantalla</value>
-  </data>
   <data name="HotkeyType_ScreenColorPicker" xml:space="preserve">
     <value>Pantalla de selector de color</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIF_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderCustomRegion_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIFCustomRegion_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIFActiveWindow_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
-  <data name="HotkeyType_StartScreenRecorder_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderActiveWindow_Category" xml:space="preserve">
-    <value>Grabación de pantalla</value>
   </data>
   <data name="HotkeyType_ShortenURL" xml:space="preserve">
     <value>Acortar enlace</value>
@@ -1072,27 +919,6 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   <data name="HotkeyType_ToggleActionsToolbar" xml:space="preserve">
     <value>Alternar la barra de herramientas de acciones</value>
   </data>
-  <data name="HotkeyType_TweetMessage_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_VideoThumbnailer_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_Ruler_Category" xml:space="preserve">
-    <value>Herramientas</value>
-  </data>
-  <data name="HotkeyType_UploadText_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
-  <data name="HotkeyType_StopUploads_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
-  <data name="HotkeyType_ShortenURL_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
-  <data name="HotkeyType_UploadURL_Category" xml:space="preserve">
-    <value>Subir</value>
-  </data>
   <data name="HotkeyType_UploadURL" xml:space="preserve">
     <value>Subir desde enlace</value>
   </data>
@@ -1125,5 +951,293 @@ Tamaño: {2:n0} / {3:n0} KB</value>
   </data>
   <data name="ShapeType_ToolSelect" xml:space="preserve">
     <value>Seleccionar y mover (M)</value>
+  </data>
+  <data name="DrawImageSizeMode_PercentageOfCanvas" xml:space="preserve">
+    <value>Porcentaje de lienzo</value>
+  </data>
+  <data name="ShapeType_DrawingSmartEraser" xml:space="preserve">
+    <value>Borrador inteligente</value>
+  </data>
+  <data name="HotkeyType_ImageThumbnailer" xml:space="preserve">
+    <value>Generador de miniaturas de imágenes</value>
+  </data>
+  <data name="ObjectListView_ObjectListView_Name" xml:space="preserve">
+    <value>Nombre</value>
+  </data>
+  <data name="ReplCodeMenuCategory_Window" xml:space="preserve">
+    <value>Ventana</value>
+  </data>
+  <data name="DrawImageSizeMode_DontResize" xml:space="preserve">
+    <value>No redimensionar</value>
+  </data>
+  <data name="HotkeyType_QRCodeDecodeFromScreen" xml:space="preserve">
+    <value>Código QR (Decodificar desde la pantalla)</value>
+  </data>
+  <data name="DrawImageSizeMode_AbsoluteSize" xml:space="preserve">
+    <value>Tamaño absoluto</value>
+  </data>
+  <data name="ObjectListView_ObjectListView_Copy_value" xml:space="preserve">
+    <value>Copiar valor</value>
+  </data>
+  <data name="ObjectListView_ObjectListView_Value" xml:space="preserve">
+    <value>Valor</value>
+  </data>
+  <data name="ObjectListView_ObjectListView_Copy_name" xml:space="preserve">
+    <value>Copiar nombre</value>
+  </data>
+  <data name="HotkeyType_VideoConverter" xml:space="preserve">
+    <value>Conversor de video</value>
+  </data>
+  <data name="DrawImageSizeMode_PercentageOfWatermark" xml:space="preserve">
+    <value>Porcentaje de imagen</value>
+  </data>
+  <data name="HotkeyType_ImageSplitter" xml:space="preserve">
+    <value>Divisor de imágenes</value>
+  </data>
+  <data name="ResultOfFirstFile" xml:space="preserve">
+    <value>Resultado del primer archivo:</value>
+  </data>
+  <data name="ResultOfSecondFile" xml:space="preserve">
+    <value>Resultado del segundo archivo:</value>
+  </data>
+  <data name="Result" xml:space="preserve">
+    <value>Resultado:</value>
+  </data>
+  <data name="Target" xml:space="preserve">
+    <value>Objetivo:</value>
+  </data>
+  <data name="ArrowHeadDirection_End" xml:space="preserve">
+    <value>Fin</value>
+  </data>
+  <data name="ArrowHeadDirection_Start" xml:space="preserve">
+    <value>Inicio</value>
+  </data>
+  <data name="ArrowHeadDirection_Both" xml:space="preserve">
+    <value>Ambos</value>
+  </data>
+  <data name="StepType_LettersLowercase" xml:space="preserve">
+    <value>Letras (Minúsculas)</value>
+  </data>
+  <data name="StepType_LettersUppercase" xml:space="preserve">
+    <value>Letras (Mayúsculas)</value>
+  </data>
+  <data name="StepType_Numbers" xml:space="preserve">
+    <value>Números</value>
+  </data>
+  <data name="StepType_RomanNumeralsLowercase" xml:space="preserve">
+    <value>Numerales romanos (Minúsculas)</value>
+  </data>
+  <data name="StepType_RomanNumeralsUppercase" xml:space="preserve">
+    <value>Numerales romanos (Mayúsculas)</value>
+  </data>
+  <data name="HotkeyType_ClipboardViewer" xml:space="preserve">
+    <value>Visualizador de portapapeles</value>
+  </data>
+  <data name="HotkeyType_InspectWindow" xml:space="preserve">
+    <value>Inspeccionar ventana</value>
+  </data>
+  <data name="BorderStyle_Solid" xml:space="preserve">
+    <value>Sólido</value>
+  </data>
+  <data name="BorderStyle_Dash" xml:space="preserve">
+    <value>Guión</value>
+  </data>
+  <data name="BorderStyle_Dot" xml:space="preserve">
+    <value>Punto</value>
+  </data>
+  <data name="BorderStyle_DashDot" xml:space="preserve">
+    <value>GuiónPunto</value>
+  </data>
+  <data name="BorderStyle_DashDotDot" xml:space="preserve">
+    <value>GuiónPuntoPunto</value>
+  </data>
+  <data name="ToastClickAction_CloseNotification" xml:space="preserve">
+    <value>Cerrar notificación</value>
+  </data>
+  <data name="ToastClickAction_AnnotateImage" xml:space="preserve">
+    <value>Editar imagen</value>
+  </data>
+  <data name="ToastClickAction_CopyImageToClipboard" xml:space="preserve">
+    <value>Copiar imagen</value>
+  </data>
+  <data name="ToastClickAction_CopyFile" xml:space="preserve">
+    <value>Copiar archivo</value>
+  </data>
+  <data name="ToastClickAction_CopyFilePath" xml:space="preserve">
+    <value>Copiar ruta de archivo</value>
+  </data>
+  <data name="ToastClickAction_CopyUrl" xml:space="preserve">
+    <value>Copiar enlace</value>
+  </data>
+  <data name="ToastClickAction_OpenFile" xml:space="preserve">
+    <value>Abrir archivo</value>
+  </data>
+  <data name="ToastClickAction_OpenFolder" xml:space="preserve">
+    <value>Abrir carpeta</value>
+  </data>
+  <data name="ToastClickAction_OpenUrl" xml:space="preserve">
+    <value>Abrir enlace</value>
+  </data>
+  <data name="ToastClickAction_Upload" xml:space="preserve">
+    <value>Subir archivo</value>
+  </data>
+  <data name="ContentAlignment_TopLeft" xml:space="preserve">
+    <value>Superior izquierda</value>
+  </data>
+  <data name="ContentAlignment_TopCenter" xml:space="preserve">
+    <value>Centro superior</value>
+  </data>
+  <data name="ContentAlignment_TopRight" xml:space="preserve">
+    <value>Superior derecha</value>
+  </data>
+  <data name="ContentAlignment_MiddleLeft" xml:space="preserve">
+    <value>Centro izquierda</value>
+  </data>
+  <data name="ContentAlignment_MiddleCenter" xml:space="preserve">
+    <value>Centro medio</value>
+  </data>
+  <data name="ContentAlignment_MiddleRight" xml:space="preserve">
+    <value>Centro derecha</value>
+  </data>
+  <data name="ContentAlignment_BottomLeft" xml:space="preserve">
+    <value>Inferior izquierda</value>
+  </data>
+  <data name="ContentAlignment_BottomCenter" xml:space="preserve">
+    <value>Centro inferior</value>
+  </data>
+  <data name="ContentAlignment_BottomRight" xml:space="preserve">
+    <value>Inferior derecha</value>
+  </data>
+  <data name="URLSharingServices_BingVisualSearch" xml:space="preserve">
+    <value>Búsqueda visual de Bing</value>
+  </data>
+  <data name="EDataType_Default" xml:space="preserve">
+    <value>Predeterminado</value>
+  </data>
+  <data name="EDataType_File" xml:space="preserve">
+    <value>Archivo</value>
+  </data>
+  <data name="EDataType_Image" xml:space="preserve">
+    <value>Imagen</value>
+  </data>
+  <data name="EDataType_Text" xml:space="preserve">
+    <value>Texto</value>
+  </data>
+  <data name="EDataType_URL" xml:space="preserve">
+    <value>URL</value>
+  </data>
+  <data name="RegionCaptureAction_CaptureLastRegion" xml:space="preserve">
+    <value>Capturar última región</value>
+  </data>
+  <data name="HotkeyType_StopScreenRecording" xml:space="preserve">
+    <value>Detener grabación de pantalla</value>
+  </data>
+  <data name="HotkeyType_ToggleTrayMenu" xml:space="preserve">
+    <value>Activar/Desactivar menú de la bandeja</value>
+  </data>
+  <data name="ThumbnailViewClickAction_Default" xml:space="preserve">
+    <value>Predeterminado</value>
+  </data>
+  <data name="ThumbnailViewClickAction_EditImage" xml:space="preserve">
+    <value>Editar imagen</value>
+  </data>
+  <data name="ThumbnailViewClickAction_OpenFile" xml:space="preserve">
+    <value>Abrir archivo</value>
+  </data>
+  <data name="ThumbnailViewClickAction_OpenFolder" xml:space="preserve">
+    <value>Abrir carpeta</value>
+  </data>
+  <data name="ThumbnailViewClickAction_OpenImageViewer" xml:space="preserve">
+    <value>Abrir visualizador de imágenes</value>
+  </data>
+  <data name="ThumbnailViewClickAction_OpenURL" xml:space="preserve">
+    <value>Abrir URL</value>
+  </data>
+  <data name="ThumbnailViewClickAction_Select" xml:space="preserve">
+    <value>Seleccionar</value>
+  </data>
+  <data name="ImagePreviewLocation_Bottom" xml:space="preserve">
+    <value>Inferior</value>
+  </data>
+  <data name="ImagePreviewLocation_Side" xml:space="preserve">
+    <value>Lateral</value>
+  </data>
+  <data name="ImagePreviewVisibility_Automatic" xml:space="preserve">
+    <value>Automático</value>
+  </data>
+  <data name="ImagePreviewVisibility_Hide" xml:space="preserve">
+    <value>Ocultar</value>
+  </data>
+  <data name="ImagePreviewVisibility_Show" xml:space="preserve">
+    <value>Mostrar</value>
+  </data>
+  <data name="TaskViewMode_ListView" xml:space="preserve">
+    <value>Vista de lista</value>
+  </data>
+  <data name="TaskViewMode_ThumbnailView" xml:space="preserve">
+    <value>Vista de miniatura</value>
+  </data>
+  <data name="ThumbnailTitleLocation_Bottom" xml:space="preserve">
+    <value>Inferior</value>
+  </data>
+  <data name="ThumbnailTitleLocation_Top" xml:space="preserve">
+    <value>Superior</value>
+  </data>
+  <data name="HotkeyType_ImageViewer" xml:space="preserve">
+    <value>Visualizador de imágenes</value>
+  </data>
+  <data name="HotkeyType_OCR" xml:space="preserve">
+    <value>OCR</value>
+  </data>
+  <data name="HotkeyType_BorderlessWindow" xml:space="preserve">
+    <value>Ventana sin bordes</value>
+  </data>
+  <data name="AfterCaptureTasks_PinToScreen" xml:space="preserve">
+    <value>Fijar a pantalla</value>
+  </data>
+  <data name="ToastClickAction_PinToScreen" xml:space="preserve">
+    <value>Fijar a pantalla</value>
+  </data>
+  <data name="ShareXImageViewer" xml:space="preserve">
+    <value>ShareX - Visualizador de imagen</value>
+  </data>
+  <data name="HotkeyType_PinToScreen" xml:space="preserve">
+    <value>Fijar a pantalla</value>
+  </data>
+  <data name="CutOutEffectType_None" xml:space="preserve">
+    <value>Sin efecto</value>
+  </data>
+  <data name="CutOutEffectType_TornEdge" xml:space="preserve">
+    <value>Bordes rasgados</value>
+  </data>
+  <data name="CutOutEffectType_Wave" xml:space="preserve">
+    <value>Onda</value>
+  </data>
+  <data name="CutOutEffectType_ZigZag" xml:space="preserve">
+    <value>Dientes de sierra</value>
+  </data>
+  <data name="ShapeType_ToolCutOut" xml:space="preserve">
+    <value>Recorte (X)</value>
+  </data>
+  <data name="HotkeyType_PinToScreenFromClipboard" xml:space="preserve">
+    <value>Fijar en pantalla (Desde portapapeles)</value>
+  </data>
+  <data name="HotkeyType_PinToScreenFromFile" xml:space="preserve">
+    <value>Fijar en pantalla (Desde archivo)</value>
+  </data>
+  <data name="HotkeyType_PinToScreenFromScreen" xml:space="preserve">
+    <value>Fijar en pantalla (Desde pantalla)</value>
+  </data>
+  <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
+    <value>Pausar grabacióñ de pantalla</value>
+  </data>
+  <data name="ShapeType_DrawingFreehandArrow" xml:space="preserve">
+    <value>Flecha a mano alzada</value>
+  </data>
+  <data name="HotkeyType_ImageBeautifier" xml:space="preserve">
+    <value>Embellecedor de imagen</value>
+  </data>
+  <data name="AfterCaptureTasks_BeautifyImage" xml:space="preserve">
+    <value>Embellecer imagen</value>
   </data>
 </root>

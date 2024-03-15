@@ -93,6 +93,16 @@ namespace ShareX.ScreenCaptureLib.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap arrow_circle_315 {
+            get {
+                object obj = ResourceManager.GetObject("arrow_circle_315", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap arrow_circle_double {
             get {
                 object obj = ResourceManager.GetObject("arrow_circle_double", resourceCulture);
@@ -206,11 +216,30 @@ namespace ShareX.ScreenCaptureLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Confirmation.
+        /// </summary>
+        internal static string Confirmation {
+            get {
+                return ResourceManager.GetString("Confirmation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap control {
             get {
                 object obj = ResourceManager.GetObject("control", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap control_pause {
+            get {
+                object obj = ResourceManager.GetObject("control-pause", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -619,24 +648,6 @@ namespace ShareX.ScreenCaptureLib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bitrate: {0}k.
-        /// </summary>
-        internal static string FFmpegOptionsForm_UpdateUI_Bitrate___0_k {
-            get {
-                return ResourceManager.GetString("FFmpegOptionsForm_UpdateUI_Bitrate___0_k", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Quality:.
-        /// </summary>
-        internal static string FFmpegOptionsForm_UpdateUI_Quality_ {
-            get {
-                return ResourceManager.GetString("FFmpegOptionsForm_UpdateUI_Quality_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap folder_open_image {
@@ -836,6 +847,15 @@ namespace ShareX.ScreenCaptureLib.Properties {
         internal static string ImageUploading {
             get {
                 return ResourceManager.GetString("ImageUploading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image URL.
+        /// </summary>
+        internal static string ImageURL {
+            get {
+                return ResourceManager.GetString("ImageURL", resourceCulture);
             }
         }
         
@@ -1347,21 +1367,22 @@ namespace ShareX.ScreenCaptureLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to There are unsaved changes.
+        ///
+        ///Would you like to save the changes before closing the image editor?.
+        /// </summary>
+        internal static string RegionCaptureForm_SaveChangesBeforeClosingEditor {
+            get {
+                return ResourceManager.GetString("RegionCaptureForm_SaveChangesBeforeClosingEditor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ShareX - Image editor.
         /// </summary>
         internal static string RegionCaptureForm_ShowExitConfirmation_ShareXImageEditor {
             get {
                 return ResourceManager.GetString("RegionCaptureForm_ShowExitConfirmation_ShareXImageEditor", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to There are unsaved changes.
-        ///Would you like to close image editor?.
-        /// </summary>
-        internal static string RegionCaptureForm_ShowExitConfirmation_Text {
-            get {
-                return ResourceManager.GetString("RegionCaptureForm_ShowExitConfirmation_Text", resourceCulture);
             }
         }
         
@@ -1825,7 +1846,7 @@ namespace ShareX.ScreenCaptureLib.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Copy image to clipboard (Ctrl + Shift + C).
+        ///   Looks up a localized string similar to Copy image to clipboard (Ctrl + C).
         /// </summary>
         internal static string ShapeManager_CreateToolbar_CopyImageToClipboard {
             get {
@@ -2001,6 +2022,15 @@ namespace ShareX.ScreenCaptureLib.Properties {
         internal static string ShapeManager_CreateToolbar_PrintImage {
             get {
                 return ResourceManager.GetString("ShapeManager_CreateToolbar_PrintImage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Redo.
+        /// </summary>
+        internal static string ShapeManager_CreateToolbar_Redo {
+            get {
+                return ResourceManager.GetString("ShapeManager_CreateToolbar_Redo", resourceCulture);
             }
         }
         
@@ -2223,6 +2253,15 @@ namespace ShareX.ScreenCaptureLib.Properties {
         internal static string WebpageCaptureForm_UpdateControls_Stop {
             get {
                 return ResourceManager.GetString("WebpageCaptureForm_UpdateControls_Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Would you like to reset options?.
+        /// </summary>
+        internal static string WouldYouLikeToResetOptions {
+            get {
+                return ResourceManager.GetString("WouldYouLikeToResetOptions", resourceCulture);
             }
         }
         

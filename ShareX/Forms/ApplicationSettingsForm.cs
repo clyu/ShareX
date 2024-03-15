@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -42,7 +42,7 @@ namespace ShareX
         public ApplicationSettingsForm()
         {
             InitializeControls();
-            ShareXResources.ApplyTheme(this);
+            ShareXResources.ApplyTheme(this, true);
         }
 
         private void SettingsForm_Shown(object sender, EventArgs e)
@@ -120,16 +120,20 @@ namespace ShareX
             cbTrayMiddleClickAction.SelectedIndex = (int)Program.Settings.TrayMiddleClickAction;
 
 #if STEAM || MicrosoftStore
+            cbAutoCheckUpdate.Visible = false;
             cbCheckPreReleaseUpdates.Visible = false;
             btnCheckDevBuild.Visible = false;
 #else
             if (SystemOptions.DisableUpdateCheck)
             {
+                cbAutoCheckUpdate.Visible = false;
                 cbCheckPreReleaseUpdates.Visible = false;
                 btnCheckDevBuild.Visible = false;
             }
             else
             {
+                cbAutoCheckUpdate.Checked = Program.Settings.AutoCheckUpdate;
+                cbCheckPreReleaseUpdates.Enabled = Program.Settings.AutoCheckUpdate;
                 cbCheckPreReleaseUpdates.Checked = Program.Settings.CheckPreReleaseUpdates;
             }
 #endif
@@ -443,6 +447,12 @@ namespace ShareX
             new QuickTaskMenuEditorForm().ShowDialog();
         }
 
+        private void cbAutoCheckUpdate_CheckedChanged(object sender, EventArgs e)
+        {
+            Program.Settings.AutoCheckUpdate = cbAutoCheckUpdate.Checked;
+            cbCheckPreReleaseUpdates.Enabled = Program.Settings.AutoCheckUpdate;
+        }
+
         private void cbCheckPreReleaseUpdates_CheckedChanged(object sender, EventArgs e)
         {
             Program.Settings.CheckPreReleaseUpdates = cbCheckPreReleaseUpdates.Checked;
@@ -745,7 +755,7 @@ namespace ShareX
                 using (SaveFileDialog sfd = new SaveFileDialog())
                 {
                     sfd.DefaultExt = "sxb";
-                    sfd.FileName = $"ShareX-{Application.ProductVersion}-backup.sxb";
+                    sfd.FileName = $"ShareX-{Helpers.GetApplicationVersion()}-backup.sxb";
                     sfd.Filter = "ShareX backup (*.sxb)|*.sxb|All files (*.*)|*.*";
 
                     if (sfd.ShowDialog() == DialogResult.OK)

@@ -219,9 +219,6 @@
   <data name="FolderSelectDialog_Title_Select_a_folder" xml:space="preserve">
     <value>폴더 선택</value>
   </data>
-  <data name="Start" xml:space="preserve">
-    <value>시작</value>
-  </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>인쇄</value>
   </data>
@@ -509,15 +506,6 @@
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>파일 이름에 숫자 덧붙이기</value>
   </data>
-  <data name="PopUpNotificationType_BalloonTip" xml:space="preserve">
-    <value>트레이 풍선 팁 표시</value>
-  </data>
-  <data name="PopUpNotificationType_None" xml:space="preserve">
-    <value>아무것도 표시하지 않기</value>
-  </data>
-  <data name="PopUpNotificationType_ToastNotification" xml:space="preserve">
-    <value>알림 메시지를 미리보기와 함께 표시</value>
-  </data>
   <data name="SupportedLanguage_Automatic" xml:space="preserve">
     <value>자동</value>
   </data>
@@ -688,116 +676,20 @@
   <data name="HotkeyType_CustomRegion" xml:space="preserve">
     <value>미리 지정된 영역 촬영</value>
   </data>
-  <data name="HotkeyType_ActiveMonitor_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_ActiveWindow_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_AutoCapture_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_ClipboardUploadWithContentViewer_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="HotkeyType_ClipboardUpload_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="HotkeyType_ColorPicker_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Tools" xml:space="preserve">
     <value>도구</value>
   </data>
-  <data name="HotkeyType_CustomRegion_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_DragDropUpload_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Upload" xml:space="preserve">
     <value>업로드</value>
   </data>
-  <data name="HotkeyType_FileUpload_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="HotkeyType_FolderUpload_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="HotkeyType_HashCheck_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_ImageEffects_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_IndexFolder_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_LastRegion_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_ScreenCapture" xml:space="preserve">
     <value>화면 촬영</value>
   </data>
-  <data name="HotkeyType_PrintScreen_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_RectangleLight_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_RectangleRegion_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_RectangleTransparent_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIF_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_ScreenRecord" xml:space="preserve">
     <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorder_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_StartScreenRecorderGIF_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_StartScreenRecorder_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_StartAutoCapture_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_OpenScreenshotsFolder_Category" xml:space="preserve">
-    <value>기타</value>
-  </data>
-  <data name="HotkeyType_QRCode_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_Ruler_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_ScreenColorPicker_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_TweetMessage_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_StopUploads_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="HotkeyType_UploadURL_Category" xml:space="preserve">
-    <value>업로드</value>
   </data>
   <data name="HotkeyType_DNSChanger" xml:space="preserve">
     <value>DNS 변경기</value>
-  </data>
-  <data name="HotkeyType_ImageEditor_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_DNSChanger_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_MonitorTest_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_WindowRectangle_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderActiveWindow_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIFActiveWindow_Category" xml:space="preserve">
-    <value>화면 녹화</value>
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>모니터 테스트</value>
@@ -844,49 +736,13 @@
   <data name="PNGBitDepth_Automatic" xml:space="preserve">
     <value>자동 감지</value>
   </data>
-  <data name="HotkeyType_ShortenURL_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
-  <data name="HotkeyType_UploadText_Category" xml:space="preserve">
-    <value>업로드</value>
-  </data>
   <data name="HotkeyType_ShortenURL" xml:space="preserve">
     <value>URL 단축</value>
   </data>
   <data name="HotkeyType_UploadText" xml:space="preserve">
     <value>텍스트 업로드</value>
   </data>
-  <data name="HotkeyType_ExitShareX_Category" xml:space="preserve">
-    <value>기타</value>
-  </data>
-  <data name="HotkeyType_ToggleActionsToolbar_Category" xml:space="preserve">
-    <value>기타</value>
-  </data>
-  <data name="HotkeyType_AbortScreenRecording_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIFCustomRegion_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderCustomRegion_Category" xml:space="preserve">
-    <value>화면 녹화</value>
-  </data>
-  <data name="HotkeyType_CaptureWebpage_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_ScrollingCapture_Category" xml:space="preserve">
-    <value>화면 촬영</value>
-  </data>
-  <data name="HotkeyType_OpenMainWindow_Category" xml:space="preserve">
-    <value>기타</value>
-  </data>
-  <data name="HotkeyType_DisableHotkeys_Category" xml:space="preserve">
-    <value>기타</value>
-  </data>
-  <data name="HotkeyType_OpenImageHistory_Category" xml:space="preserve">
-    <value>기타</value>
-  </data>
-  <data name="HotkeyType_OpenHistory_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Other" xml:space="preserve">
     <value>기타</value>
   </data>
   <data name="HotkeyType_OpenMainWindow" xml:space="preserve">
@@ -906,12 +762,6 @@
   </data>
   <data name="ReplCodeMenuCategory_Computer" xml:space="preserve">
     <value>컴퓨터</value>
-  </data>
-  <data name="HotkeyType_VideoThumbnailer_Category" xml:space="preserve">
-    <value>도구</value>
-  </data>
-  <data name="HotkeyType_ImageCombiner_Category" xml:space="preserve">
-    <value>도구</value>
   </data>
   <data name="HotkeyType_ScreenRecorderActiveWindow" xml:space="preserve">
     <value>활성화 된 창 영역에서 화면 녹화 시작/중단</value>
@@ -1038,30 +888,6 @@
   </data>
   <data name="LinearGradientMode_Vertical" xml:space="preserve">
     <value>세로</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_None" xml:space="preserve">
-    <value>최상단으로 스크롤하지 않기</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_KeyPressHome" xml:space="preserve">
-    <value>"Home" 키 누르기</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_KeyPressPageDown" xml:space="preserve">
-    <value>"Page Down" 키 누르기</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_MouseWheel" xml:space="preserve">
-    <value>마우스 휠로 스크롤하기</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_Automatic" xml:space="preserve">
-    <value>될 때 까지 자동으로 모든 방법을 시험해 보기</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_SendMessageScroll" xml:space="preserve">
-    <value>창이나 컨트롤에 스크롤 메세지 보내기</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_SendMessageTop" xml:space="preserve">
-    <value>최상단으로 스크롤 메세지 보내기</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_All" xml:space="preserve">
-    <value>"Home" 키를 누른 다음 최상단으로 스크롤 메세지 보내기</value>
   </data>
   <data name="AfterCaptureTasks_ShowQuickTaskMenu" xml:space="preserve">
     <value>간편 작업 메뉴 보이기</value>

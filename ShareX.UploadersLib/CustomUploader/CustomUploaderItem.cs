@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -32,7 +32,6 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
-using System.Windows.Forms;
 
 namespace ShareX.UploadersLib
 {
@@ -52,7 +51,7 @@ namespace ShareX.UploadersLib
         [DefaultValue(HttpMethod.POST), JsonProperty(DefaultValueHandling = DefaultValueHandling.Include)]
         public HttpMethod RequestMethod { get; set; } = HttpMethod.POST;
 
-        // For backward compatibility
+        // TEMP: For backward compatibility
         [JsonProperty]
         private HttpMethod RequestType { set => RequestMethod = value; }
 
@@ -88,7 +87,7 @@ namespace ShareX.UploadersLib
 
         public bool ShouldSerializeData() => (Body == CustomUploaderBody.JSON || Body == CustomUploaderBody.XML) && !string.IsNullOrEmpty(Data);
 
-        // For backward compatibility
+        // TEMP: For backward compatibility
         public ResponseType ResponseType { private get; set; }
 
         [DefaultValue("")]
@@ -111,7 +110,7 @@ namespace ShareX.UploadersLib
         {
             return new CustomUploaderItem()
             {
-                Version = Application.ProductVersion,
+                Version = Helpers.GetApplicationVersion(),
                 RequestMethod = HttpMethod.POST,
                 Body = CustomUploaderBody.MultipartFormData
             };
@@ -296,6 +295,11 @@ namespace ShareX.UploadersLib
                     if (!string.IsNullOrEmpty(URL))
                     {
                         url = parser.Parse(URL);
+
+                        if (string.IsNullOrEmpty(url) && !string.IsNullOrEmpty(URL) && URL.Contains("{output:"))
+                        {
+                            result.IsURLExpected = false;
+                        }
                     }
                     else
                     {
@@ -449,7 +453,7 @@ namespace ShareX.UploadersLib
                 DeletionURL = MigrateOldSyntax(DeletionURL);
                 ErrorMessage = MigrateOldSyntax(ErrorMessage);
 
-                Version = Application.ProductVersion;
+                Version = Helpers.GetApplicationVersion();
             }
         }
 

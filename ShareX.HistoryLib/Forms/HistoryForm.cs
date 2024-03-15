@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -89,7 +89,7 @@ namespace ShareX.HistoryLib
                 tstbSearch.Text = Settings.SearchText;
             }
 
-            ShareXResources.ApplyTheme(this);
+            ShareXResources.ApplyTheme(this, true);
 
             if (Settings.RememberWindowState)
             {
@@ -122,17 +122,19 @@ namespace ShareX.HistoryLib
         {
             allHistoryItems = await GetHistoryItems(mockData);
 
-            ApplyFilterSimple();
-
             cbTypeFilterSelection.Items.Clear();
             cbHostFilterSelection.Items.Clear();
+            tstbSearch.AutoCompleteCustomSource.Clear();
 
             if (allHistoryItems.Length > 0)
             {
-                allTypeNames = allHistoryItems.Select(x => x.Type).Distinct().Where(x => !string.IsNullOrEmpty(x)).ToArray();
+                allTypeNames = allHistoryItems.Select(x => x.Type).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().ToArray();
                 cbTypeFilterSelection.Items.AddRange(allTypeNames.Select(x => typeNamesLocaleLookup.TryGetValue(x, out string value) ? value : x).ToArray());
-                cbHostFilterSelection.Items.AddRange(allHistoryItems.Select(x => x.Host).Distinct().Where(x => !string.IsNullOrEmpty(x)).ToArray());
+                cbHostFilterSelection.Items.AddRange(allHistoryItems.Select(x => x.Host).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().ToArray());
+                tstbSearch.AutoCompleteCustomSource.AddRange(allHistoryItems.Select(x => x.TagsProcessName).Where(x => !string.IsNullOrWhiteSpace(x)).Distinct().ToArray());
             }
+
+            ApplyFilterSimple();
 
             ResetFilters();
         }
@@ -410,11 +412,11 @@ namespace ShareX.HistoryLib
             switch (e.KeyData)
             {
                 case Keys.F5:
-                    e.Handled = true;
+                    e.SuppressKeyPress = true;
                     await RefreshHistoryItems();
                     break;
                 case Keys.Control | Keys.F5 when HelpersOptions.DevMode:
-                    e.Handled = true;
+                    e.SuppressKeyPress = true;
                     await RefreshHistoryItems(true);
                     break;
             }
@@ -519,7 +521,7 @@ namespace ShareX.HistoryLib
 
         private void lvHistory_KeyDown(object sender, KeyEventArgs e)
         {
-            e.Handled = e.SuppressKeyPress = him.HandleKeyInput(e);
+            e.SuppressKeyPress = him.HandleKeyInput(e);
         }
 
         private void lvHistory_ItemDrag(object sender, ItemDragEventArgs e)

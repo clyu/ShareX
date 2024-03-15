@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -614,6 +614,16 @@ namespace ShareX
                 return true;
             }
 
+            if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.BeautifyImage))
+            {
+                Image = TaskHelpers.BeautifyImage(Image, Info.TaskSettings);
+
+                if (Image == null)
+                {
+                    return false;
+                }
+            }
+
             if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.AddImageEffects))
             {
                 Image = TaskHelpers.ApplyImageEffects(Image, Info.TaskSettings.ImageSettingsReference);
@@ -644,7 +654,7 @@ namespace ShareX
             if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.PinToScreen))
             {
                 Image imageCopy = Image.CloneSafe();
-                threadWorker.InvokeAsync(() => TaskHelpers.PinToScreen(imageCopy));
+                TaskHelpers.PinToScreen(imageCopy, Info.TaskSettings.ToolsSettingsReference.PinToScreenOptions);
             }
 
             if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.SendImageToPrinter))
@@ -802,7 +812,7 @@ namespace ShareX
 
                 if (Info.TaskSettings.AfterCaptureJob.HasFlag(AfterCaptureTasks.ScanQRCode) && Info.DataType == EDataType.Image)
                 {
-                    QRCodeForm.OpenFormDecodeFromFile(Info.FilePath).ShowDialog();
+                    QRCodeForm.OpenFormScanFromImageFile(Info.FilePath).ShowDialog();
                 }
             }
         }
@@ -1064,11 +1074,18 @@ namespace ShareX
 
             if (!Info.TaskSettings.UploadSettings.FileUploadUseNamePattern)
             {
-                string fileName = URLHelpers.GetFileNameFromWebServer(url);
-
-                if (!string.IsNullOrEmpty(fileName))
+                try
                 {
-                    Info.FileName = FileHelpers.SanitizeFileName(fileName);
+                    string fileName = WebHelpers.GetFileNameFromWebServerAsync(url).GetAwaiter().GetResult();
+
+                    if (!string.IsNullOrEmpty(fileName))
+                    {
+                        Info.FileName = FileHelpers.SanitizeFileName(fileName);
+                    }
+                }
+                catch (Exception e)
+                {
+                    DebugHelper.WriteException(e);
                 }
             }
 
@@ -1082,7 +1099,7 @@ namespace ShareX
 
                 try
                 {
-                    URLHelpers.DownloadFile(url, Info.FilePath);
+                    WebHelpers.DownloadFileAsync(url, Info.FilePath).GetAwaiter().GetResult();
 
                     if (upload)
                     {

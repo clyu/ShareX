@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2023 ShareX Team
+    Copyright (c) 2007-2024 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -30,6 +30,8 @@ using ShareX.UploadersLib;
 using System;
 using System.Drawing;
 using System.IO;
+using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows.Forms;
@@ -205,23 +207,49 @@ namespace ShareX
         {
             if (taskSettings == null) taskSettings = TaskSettings.GetDefaultTaskSettings();
 
-            if (ClipboardHelpers.ContainsImage())
+            try
             {
-                Bitmap bmp = ClipboardHelpers.GetImage();
+                if (Clipboard.ContainsImage())
+                {
+                    Bitmap image;
 
-                ProcessImageUpload(bmp, taskSettings);
+                    if (HelpersOptions.UseAlternativeClipboardGetImage)
+                    {
+                        image = ClipboardHelpers.GetImageAlternative2();
+                    }
+                    else
+                    {
+                        image = (Bitmap)Clipboard.GetImage();
+                    }
+
+                    ProcessImageUpload(image, taskSettings);
+                }
+                else if (Clipboard.ContainsText())
+                {
+                    string text = Clipboard.GetText();
+
+                    ProcessTextUpload(text, taskSettings);
+                }
+                else if (Clipboard.ContainsFileDropList())
+                {
+                    string[] files = Clipboard.GetFileDropList().Cast<string>().ToArray();
+
+                    ProcessFilesUpload(files, taskSettings);
+                }
             }
-            else if (ClipboardHelpers.ContainsText())
+            catch (ExternalException e)
             {
-                string text = ClipboardHelpers.GetText();
+                DebugHelper.WriteException(e);
 
-                ProcessTextUpload(text, taskSettings);
+                if (MessageBox.Show("\"" + e.Message + "\"\r\n\r\n" + Resources.WouldYouLikeToRetryClipboardUpload, "ShareX - " + Resources.ClipboardUpload,
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    ClipboardUpload(taskSettings);
+                }
             }
-            else if (ClipboardHelpers.ContainsFileDropList())
+            catch (Exception e)
             {
-                string[] files = ClipboardHelpers.GetFileDropList();
-
-                ProcessFilesUpload(files, taskSettings);
+                DebugHelper.WriteException(e);
             }
         }
 
@@ -305,7 +333,7 @@ namespace ShareX
                 inputText = text;
             }
 
-            string url = InputBox.GetInputText("ShareX - " + Resources.UploadManager_UploadURL_URL_to_download_from_and_upload, inputText);
+            string url = InputBox.Show(Resources.UploadManager_UploadURL_URL_to_download_from_and_upload, inputText);
 
             if (!string.IsNullOrEmpty(url))
             {
@@ -326,8 +354,7 @@ namespace ShareX
                 inputText = text;
             }
 
-            string url = InputBox.GetInputText("ShareX - " + Resources.UploadManager_ShowShortenURLDialog_ShortenURL, inputText,
-                Resources.UploadManager_ShowShortenURLDialog_Shorten);
+            string url = InputBox.Show(Resources.UploadManager_ShowShortenURLDialog_ShortenURL, inputText, Resources.UploadManager_ShowShortenURLDialog_Shorten);
 
             if (!string.IsNullOrEmpty(url))
             {

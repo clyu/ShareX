@@ -156,9 +156,6 @@
   <data name="FolderSelectDialog_Title_Select_a_folder" xml:space="preserve">
     <value>Chọn một thư mục</value>
   </data>
-  <data name="Start" xml:space="preserve">
-    <value>Bắt đầu</value>
-  </data>
   <data name="PrintForm_LoadSettings_Print" xml:space="preserve">
     <value>In</value>
   </data>
@@ -446,15 +443,6 @@ Kích thước tệp: {2:n0} / {3:n0} KB</value>
   <data name="FileExistAction_UniqueName" xml:space="preserve">
     <value>Thêm số vào tên tệp</value>
   </data>
-  <data name="PopUpNotificationType_BalloonTip" xml:space="preserve">
-    <value>Hiện hướng dẫn từ khay hệ thống</value>
-  </data>
-  <data name="PopUpNotificationType_None" xml:space="preserve">
-    <value>Không hiện gì</value>
-  </data>
-  <data name="PopUpNotificationType_ToastNotification" xml:space="preserve">
-    <value>Hiện thông báo tạm thời với vùng xem trước</value>
-  </data>
   <data name="SupportedLanguage_Automatic" xml:space="preserve">
     <value>Tự động</value>
   </data>
@@ -498,140 +486,38 @@ Bạn có muốn tải về và cài đặt không?</value>
   <data name="ScreenRecordGIFEncoding_OctreeQuantizer" xml:space="preserve">
     <value>Bộ lượng tử octree (Chất lượng trung bình)</value>
   </data>
-  <data name="HotkeyType_ActiveMonitor_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
+  <data name="HotkeyType_Category_Tools" xml:space="preserve">
+    <value>Công cụ</value>
   </data>
-  <data name="HotkeyType_ActiveWindow_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_AutoCapture_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_ClipboardUploadWithContentViewer_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Upload" xml:space="preserve">
     <value>Tải lên</value>
   </data>
-  <data name="HotkeyType_ClipboardUpload_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_ColorPicker_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_CustomRegion_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_ScreenCapture" xml:space="preserve">
     <value>Chụp màn hình</value>
   </data>
-  <data name="HotkeyType_DragDropUpload_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_FileUpload_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_FolderUpload_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_HashCheck_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_ImageEffects_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_IndexFolder_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_LastRegion_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_OpenScreenshotsFolder_Category" xml:space="preserve">
-    <value>Khác</value>
-  </data>
-  <data name="HotkeyType_PrintScreen_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_QRCode_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_RectangleLight_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_RectangleRegion_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_RectangleTransparent_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_Ruler_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_ScreenColorPicker_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIF_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_ScreenRecord" xml:space="preserve">
     <value>Ghi lại màn hình</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorder_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
-  </data>
-  <data name="HotkeyType_StartAutoCapture_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
-  <data name="HotkeyType_StartScreenRecorderGIF_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
-  </data>
-  <data name="HotkeyType_StartScreenRecorder_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
-  </data>
-  <data name="HotkeyType_StopUploads_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_TweetMessage_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_UploadURL_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_WindowRectangle_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
   </data>
   <data name="HotkeyType_ScreenRecorderActiveWindow" xml:space="preserve">
     <value>Bắt đầu/Dừng ghi lại màn hình sử dụng vùng cửa sổ đang hoạt động</value>
   </data>
-  <data name="HotkeyType_ScreenRecorderActiveWindow_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
-  </data>
   <data name="HotkeyType_ScreenRecorderGIFActiveWindow" xml:space="preserve">
     <value>Bắt đầu/Dừng ghi lại màn hình (dạng ảnh GIF) sử dụng vùng cửa sổ đang hoạt động</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIFActiveWindow_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
   </data>
   <data name="HotkeyType_ImageEditor" xml:space="preserve">
     <value>Trình chỉnh sửa ảnh</value>
   </data>
-  <data name="HotkeyType_ImageEditor_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_DNSChanger" xml:space="preserve">
     <value>Trình đổi DNS</value>
-  </data>
-  <data name="HotkeyType_DNSChanger_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="HotkeyType_MonitorTest" xml:space="preserve">
     <value>Kiểm tra màn hình</value>
   </data>
-  <data name="HotkeyType_MonitorTest_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_CaptureWebpage" xml:space="preserve">
     <value>Chụp trang web</value>
   </data>
-  <data name="HotkeyType_CaptureWebpage_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
   <data name="HotkeyType_DisableHotkeys" xml:space="preserve">
     <value>Tắt/Bật phím tắt</value>
-  </data>
-  <data name="HotkeyType_DisableHotkeys_Category" xml:space="preserve">
-    <value>Khác</value>
   </data>
   <data name="ReplCodeMenuEntry_ia_Auto_increment_alphanumeric" xml:space="preserve">
     <value>Tự tăng theo chữ và số không phân biệt chữ viết hoa/thường. Chèn 0 bên trái sử dụng {n}</value>
@@ -669,20 +555,11 @@ Bạn có muốn tải về và cài đặt không?</value>
   <data name="HotkeyType_ScrollingCapture" xml:space="preserve">
     <value>Chụp khi cuộn trang</value>
   </data>
-  <data name="HotkeyType_ScrollingCapture_Category" xml:space="preserve">
-    <value>Chụp màn hình</value>
-  </data>
   <data name="HotkeyType_ImageCombiner" xml:space="preserve">
     <value>Trình gộp ảnh</value>
   </data>
-  <data name="HotkeyType_ImageCombiner_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_VideoThumbnailer" xml:space="preserve">
     <value>Trình tạo ảnh thu nhỏ/thumbnail cho video</value>
-  </data>
-  <data name="HotkeyType_VideoThumbnailer_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="ReplCodeMenuEntry_y_Current_year" xml:space="preserve">
     <value>Năm hiện tại</value>
@@ -799,9 +676,6 @@ Bạn có muốn tải về không?</value>
   <data name="PNGBitDepth_Automatic" xml:space="preserve">
     <value>Tự động phát hiện</value>
   </data>
-  <data name="ScrollingCaptureScrollMethod_Automatic" xml:space="preserve">
-    <value>Tự động thử tất cả các phương thức tới khi một cái làm được</value>
-  </data>
   <data name="LinearGradientMode_BackwardDiagonal" xml:space="preserve">
     <value>Kẻ chéo về phía sau</value>
   </data>
@@ -834,9 +708,6 @@ Bạn có muốn tải về không?</value>
   </data>
   <data name="PNGBitDepth_Default" xml:space="preserve">
     <value>Mặc định</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_None" xml:space="preserve">
-    <value>Vô hiệu hóa cuộn lên trên cùng</value>
   </data>
   <data name="RegionCaptureAction_None" xml:space="preserve">
     <value>Không làm gì</value>
@@ -898,9 +769,6 @@ Bạn có muốn tải về không?</value>
   <data name="CustomUploaderDestinationType_FileUploader" xml:space="preserve">
     <value>Dịch vụ tải lên tệp</value>
   </data>
-  <data name="ScrollingCaptureScrollTopMethod_All" xml:space="preserve">
-    <value>Đầu tiên mô phỏng nhấn phím"Home" sau đó gửi thông báo cuộn lên trên cùng</value>
-  </data>
   <data name="LinearGradientMode_ForwardDiagonal" xml:space="preserve">
     <value>Kẻ chéo về phía trước</value>
   </data>
@@ -937,12 +805,6 @@ Bạn có muốn tải về không?</value>
   <data name="PastebinPrivacy_Unlisted" xml:space="preserve">
     <value>Không công khai</value>
   </data>
-  <data name="HotkeyType_ShortenURL_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
-  <data name="HotkeyType_UploadText_Category" xml:space="preserve">
-    <value>Tải lên</value>
-  </data>
   <data name="HotkeyType_UploadText" xml:space="preserve">
     <value>Tải lên văn bản</value>
   </data>
@@ -951,15 +813,6 @@ Bạn có muốn tải về không?</value>
   </data>
   <data name="CustomUploaderDestinationType_URLShortener" xml:space="preserve">
     <value>Dịch vụ rút gọn URL</value>
-  </data>
-  <data name="HotkeyType_AbortScreenRecording_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderGIFCustomRegion_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
-  </data>
-  <data name="HotkeyType_ScreenRecorderCustomRegion_Category" xml:space="preserve">
-    <value>Ghi lại màn hình</value>
   </data>
   <data name="UpdateMessageBox_UpdateMessageBox_LatestVersion" xml:space="preserve">
     <value>Phiên bản mới nhất</value>
@@ -970,13 +823,7 @@ Bạn có muốn tải về không?</value>
   <data name="ImageEditorStartMode_Normal" xml:space="preserve">
     <value>Bình thường</value>
   </data>
-  <data name="HotkeyType_ToggleActionsToolbar_Category" xml:space="preserve">
-    <value>Khác</value>
-  </data>
-  <data name="HotkeyType_OpenImageHistory_Category" xml:space="preserve">
-    <value>Khác</value>
-  </data>
-  <data name="HotkeyType_OpenMainWindow_Category" xml:space="preserve">
+  <data name="HotkeyType_Category_Other" xml:space="preserve">
     <value>Khác</value>
   </data>
   <data name="HotkeyType_OpenMainWindow" xml:space="preserve">
@@ -987,12 +834,6 @@ Bạn có muốn tải về không?</value>
   </data>
   <data name="HotkeyType_OpenImageHistory" xml:space="preserve">
     <value>Mở cửa sổ lịch sử hình ảnh</value>
-  </data>
-  <data name="HotkeyType_OpenHistory_Category" xml:space="preserve">
-    <value>Khác</value>
-  </data>
-  <data name="HotkeyType_ExitShareX_Category" xml:space="preserve">
-    <value>Khác</value>
   </data>
   <data name="ImageEditorStartMode_PreviousState" xml:space="preserve">
     <value>Trạng thái trước</value>
@@ -1027,9 +868,6 @@ Bạn có muốn tải về không?</value>
   <data name="HotkeyType_ToggleActionsToolbar" xml:space="preserve">
     <value>Bật/Tắt thanh công cụ tác vụ</value>
   </data>
-  <data name="ScrollingCaptureScrollMethod_MouseWheel" xml:space="preserve">
-    <value>Mô phỏng cuộn chuột</value>
-  </data>
   <data name="CustomUploaderDestinationType_ImageUploader" xml:space="preserve">
     <value>Dịch vụ tải lên ảnh</value>
   </data>
@@ -1039,26 +877,17 @@ Bạn có muốn tải về không?</value>
   <data name="LinearGradientMode_Horizontal" xml:space="preserve">
     <value>Chiều ngang</value>
   </data>
-  <data name="ScrollingCaptureScrollTopMethod_SendMessageTop" xml:space="preserve">
-    <value>Gửi thông báo cuộn lên trên cùng</value>
-  </data>
   <data name="ResponseType_LocationHeader" xml:space="preserve">
     <value>Vị trí header</value>
   </data>
   <data name="RegionCaptureAction_RemoveShape" xml:space="preserve">
     <value>Xóa bỏ hình</value>
   </data>
-  <data name="ScrollingCaptureScrollMethod_KeyPressPageDown" xml:space="preserve">
-    <value>Mô phỏng nhấn phím "Page down"</value>
-  </data>
   <data name="ShapeType_ToolCrop" xml:space="preserve">
     <value>Công cụ: Cắt ảnh (C)</value>
   </data>
   <data name="URLSharingServices_GoogleImageSearch" xml:space="preserve">
     <value>Tìm kiếm hình ảnh trên Google</value>
-  </data>
-  <data name="ScrollingCaptureScrollTopMethod_KeyPressHome" xml:space="preserve">
-    <value>Mô phỏng nhấn phím "Home"</value>
   </data>
   <data name="ImgurThumbnailType_Small_Square" xml:space="preserve">
     <value>Hình vuông nhỏ</value>
@@ -1086,9 +915,6 @@ Bạn có muốn tải về không?</value>
   </data>
   <data name="ShapeType_RegionRectangle" xml:space="preserve">
     <value>Vùng: Chữ nhật</value>
-  </data>
-  <data name="ScrollingCaptureScrollMethod_SendMessageScroll" xml:space="preserve">
-    <value>Gửi thông báo cuộn trang tới cửa sổ hoặc bảng điều khiển</value>
   </data>
   <data name="ImgurThumbnailType_Small_Thumbnail" xml:space="preserve">
     <value>Hình thu nhỏ/thumbnail cỡ nhỏ</value>
@@ -1213,65 +1039,29 @@ Bạn có muốn tải về không?</value>
   <data name="HotkeyType_BorderlessWindow" xml:space="preserve">
     <value>Cửa sổ không viền</value>
   </data>
-  <data name="HotkeyType_BorderlessWindow_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_ClipboardViewer" xml:space="preserve">
     <value>Trình xem khay nhớ tạm</value>
-  </data>
-  <data name="HotkeyType_ClipboardViewer_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="HotkeyType_ImageSplitter" xml:space="preserve">
     <value>Bộ tách hình ảnh</value>
   </data>
-  <data name="HotkeyType_ImageSplitter_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_ImageThumbnailer" xml:space="preserve">
     <value>Hình thu nhỏ hình ảnh</value>
-  </data>
-  <data name="HotkeyType_ImageThumbnailer_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="HotkeyType_ImageViewer" xml:space="preserve">
     <value>Xem ảnh</value>
   </data>
-  <data name="HotkeyType_ImageViewer_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_InspectWindow" xml:space="preserve">
     <value>Kiểm tra cửa sổ</value>
-  </data>
-  <data name="HotkeyType_InspectWindow_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_OCR_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="HotkeyType_PauseScreenRecording" xml:space="preserve">
     <value>Tạm dừng ghi màn hình</value>
   </data>
-  <data name="HotkeyType_PauseScreenRecording_Category" xml:space="preserve">
-    <value>Ghi hình màn hình</value>
-  </data>
   <data name="HotkeyType_PinToScreen" xml:space="preserve">
     <value>Ghim vào màn hình</value>
   </data>
-  <data name="HotkeyType_PinToScreen_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_PinToScreenFromClipboard" xml:space="preserve">
     <value>Ghim vào màn hình (Từ khay nhớ tạm)</value>
-  </data>
-  <data name="HotkeyType_PinToScreenFromClipboard_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_PinToScreenFromFile_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
-  <data name="HotkeyType_PinToScreenFromScreen_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="HotkeyType_PinToScreenFromScreen" xml:space="preserve">
     <value>Ghim vào màn hình (Từ màn hình)</value>
@@ -1282,26 +1072,14 @@ Bạn có muốn tải về không?</value>
   <data name="HotkeyType_QRCodeDecodeFromScreen" xml:space="preserve">
     <value>Mã QR (Giải mã từ màn hình)</value>
   </data>
-  <data name="HotkeyType_QRCodeDecodeFromScreen_Category" xml:space="preserve">
-    <value>Công cụ</value>
-  </data>
   <data name="HotkeyType_StopScreenRecording" xml:space="preserve">
     <value>Dừng ghi màn hình</value>
-  </data>
-  <data name="HotkeyType_StopScreenRecording_Category" xml:space="preserve">
-    <value>Ghi hình màn hình</value>
   </data>
   <data name="HotkeyType_ToggleTrayMenu" xml:space="preserve">
     <value>Chuyển đổi menu</value>
   </data>
-  <data name="HotkeyType_ToggleTrayMenu_Category" xml:space="preserve">
-    <value>Khác</value>
-  </data>
   <data name="HotkeyType_VideoConverter" xml:space="preserve">
     <value>Chuyển đổi video</value>
-  </data>
-  <data name="HotkeyType_VideoConverter_Category" xml:space="preserve">
-    <value>Công cụ</value>
   </data>
   <data name="ImagePreviewLocation_Bottom" xml:space="preserve">
     <value>Dưới</value>

@@ -852,10 +852,6 @@
         private System.Windows.Forms.DataGridView dgvParameters;
         private System.Windows.Forms.DataGridView dgvHeaders;
         private System.Windows.Forms.DataGridView dgvArguments;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cHeadersName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cHeadersValue;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cParametersName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn cParametersValue;
         private System.Windows.Forms.ToolStripMenuItem tsmiUpdateFolder;
         private System.Windows.Forms.Panel pResultErrorMessage;
         private System.Windows.Forms.RichTextBox rtbResultErrorMessage;
@@ -863,8 +859,12 @@
         private System.Windows.Forms.Label lblUploaders;
         private System.Windows.Forms.ToolStripMenuItem tsmiClearUploaders;
         private System.Windows.Forms.Panel pMain;
+        private System.Windows.Forms.Button btnTestURLSyntax;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cHeadersName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cHeadersValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cParametersName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cParametersValue;
         private System.Windows.Forms.DataGridViewTextBoxColumn cArgumentsName;
         private System.Windows.Forms.DataGridViewTextBoxColumn cArgumentsValue;
-        private System.Windows.Forms.Button btnTestURLSyntax;
     }
 }

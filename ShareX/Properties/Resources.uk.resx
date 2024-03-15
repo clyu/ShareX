@@ -290,9 +290,6 @@
   <data name="AboutForm_AboutForm_Language_ko_KR" xml:space="preserve">
     <value>Корейська</value>
   </data>
-  <data name="HotkeyManager_ShowFailedHotkeys_These_applications_could_be_conflicting_" xml:space="preserve">
-    <value>Можливий конфлікт програми:</value>
-  </data>
   <data name="ActionsToolbarEditForm_Separator" xml:space="preserve">
     <value>Роздільник</value>
   </data>
@@ -386,9 +383,6 @@
   </data>
   <data name="SwitchToThumbnailView" xml:space="preserve">
     <value>Перемкнутись у режим мініатюр</value>
-  </data>
-  <data name="MainForm_UpdateMainFormTip_Currently_configured_hotkeys_" xml:space="preserve">
-    <value>Поточні параметри гарячих клавіш:</value>
   </data>
   <data name="RecentManager_UpdateRecentMenu_Left_click_to_copy_URL_to_clipboard__Right_click_to_open_URL_" xml:space="preserve">
     <value>Лівий притиск — для копіювання у буфер обміну. Правий — для відкриття посилання.</value>
