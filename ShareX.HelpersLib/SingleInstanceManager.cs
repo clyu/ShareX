@@ -36,23 +36,25 @@ namespace ShareX.HelpersLib
     {
         public event Action<string[]> ArgumentsReceived;
 
+        public string MutexName { get; private set; }
+        public string PipeName { get; private set; }
         public bool IsSingleInstance { get; private set; }
         public bool IsFirstInstance { get; private set; }
 
-        private const string MutexName = "82E6AC09-0FEF-4390-AD9F-0DD3F5561EFC";
-        private const string AppName = "ShareX";
-        private static readonly string PipeName = $"{Environment.MachineName}-{Environment.UserName}-{AppName}";
         private const int MaxArgumentsLength = 100;
+        private const int ConnectTimeout = 5000;
 
         private readonly Mutex mutex;
         private CancellationTokenSource cts;
 
-        public SingleInstanceManager(string[] args) : this(true, args)
+        public SingleInstanceManager(string mutexName, string pipeName, string[] args) : this(mutexName, pipeName, true, args)
         {
         }
 
-        public SingleInstanceManager(bool isSingleInstance, string[] args)
+        public SingleInstanceManager(string mutexName, string pipeName, bool isSingleInstance, string[] args)
         {
+            MutexName = mutexName;
+            PipeName = pipeName;
             IsSingleInstance = isSingleInstance;
 
             mutex = new Mutex(false, MutexName);
@@ -85,20 +87,27 @@ namespace ShareX.HelpersLib
 
         protected virtual void OnArgumentsReceived(string[] arguments)
         {
-            ArgumentsReceived?.Invoke(arguments);
+            if (ArgumentsReceived != null)
+            {
+                Task.Run(() => ArgumentsReceived?.Invoke(arguments));
+            }
         }
 
         private async Task ListenForConnectionsAsync()
         {
             while (!cts.IsCancellationRequested)
             {
+                bool namedPipeServerCreated = false;
+
                 try
                 {
-                    using (NamedPipeServerStream serverPipe = new NamedPipeServerStream(PipeName, PipeDirection.InOut, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous))
+                    using (NamedPipeServerStream namedPipeServer = new NamedPipeServerStream(PipeName, PipeDirection.InOut, 1, PipeTransmissionMode.Byte, PipeOptions.Asynchronous))
                     {
-                        await serverPipe.WaitForConnectionAsync(cts.Token);
+                        namedPipeServerCreated = true;
 
-                        using (BinaryReader reader = new BinaryReader(serverPipe, Encoding.UTF8))
+                        await namedPipeServer.WaitForConnectionAsync(cts.Token).ConfigureAwait(false);
+
+                        using (BinaryReader reader = new BinaryReader(namedPipeServer, Encoding.UTF8))
                         {
                             int length = reader.ReadInt32();
 
@@ -118,12 +127,17 @@ namespace ShareX.HelpersLib
                         }
                     }
                 }
-                catch when (cts.IsCancellationRequested)
+                catch (OperationCanceledException)
                 {
                 }
                 catch (Exception e)
                 {
                     DebugHelper.WriteException(e);
+
+                    if (!namedPipeServerCreated)
+                    {
+                        break;
+                    }
                 }
             }
         }
@@ -132,11 +146,11 @@ namespace ShareX.HelpersLib
         {
             try
             {
-                using (NamedPipeClientStream clientPipe = new NamedPipeClientStream(".", PipeName, PipeDirection.Out))
+                using (NamedPipeClientStream namedPipeClient = new NamedPipeClientStream(".", PipeName, PipeDirection.Out))
                 {
-                    clientPipe.Connect();
+                    namedPipeClient.Connect(ConnectTimeout);
 
-                    using (BinaryWriter writer = new BinaryWriter(clientPipe, Encoding.UTF8))
+                    using (BinaryWriter writer = new BinaryWriter(namedPipeClient, Encoding.UTF8))
                     {
                         writer.Write(args.Length);
 

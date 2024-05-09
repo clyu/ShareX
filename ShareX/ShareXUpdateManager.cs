@@ -23,16 +23,34 @@
 
 #endregion License Information (GPL v3)
 
-#if !MicrosoftStore
-
-using System.Windows.Forms;
+using ShareX.HelpersLib;
 
 namespace ShareX
 {
-    public class DesktopStartupManager : GenericStartupManager
+    internal class ShareXUpdateManager : GitHubUpdateManager
     {
-        public override string StartupTargetPath => Application.ExecutablePath;
+        public UpdateChannel UpdateChannel { get; set; }
+
+        public override GitHubUpdateChecker CreateUpdateChecker()
+        {
+            if (UpdateChannel == UpdateChannel.Dev)
+            {
+                return new GitHubUpdateChecker("ShareX", "DevBuilds")
+                {
+                    IsDev = true,
+                    IsPortable = Program.Portable,
+                    IgnoreRevision = true
+                };
+            }
+            else
+            {
+                return new GitHubUpdateChecker("ShareX", "ShareX")
+                {
+                    IsPortable = Program.Portable,
+                    IncludePreRelease = UpdateChannel == UpdateChannel.PreRelease,
+                    IgnoreRevision = true
+                };
+            }
+        }
     }
 }
-
-#endif
