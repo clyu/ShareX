@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2024 ShareX Team
+    Copyright (c) 2007-2025 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -623,21 +623,6 @@ namespace ShareX.HelpersLib
                 result += generator();
             }
             return result;
-        }
-
-        public static bool IsRunning(string name)
-        {
-            try
-            {
-                Mutex mutex = Mutex.OpenExisting(name);
-                mutex.ReleaseMutex();
-            }
-            catch
-            {
-                return false;
-            }
-
-            return true;
         }
 
         public static T ByteArrayToStructure<T>(byte[] bytes) where T : struct

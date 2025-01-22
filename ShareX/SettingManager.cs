@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2024 ShareX Team
+    Copyright (c) 2007-2025 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -191,7 +191,7 @@ namespace ShareX
 
         private static void ApplicationConfigBackwardCompatibilityTasks()
         {
-            if (Settings.IsFirstTimeRun && SystemOptions.DisableUpload)
+            if (SystemOptions.DisableUpload)
             {
                 DefaultTaskSettings.AfterCaptureJob = DefaultTaskSettings.AfterCaptureJob.Remove(AfterCaptureTasks.UploadImageToHost);
             }
@@ -278,13 +278,30 @@ namespace ShareX
             {
                 foreach (CustomUploaderItem cui in UploadersConfig.CustomUploadersList)
                 {
-                    cui.CheckBackwardCompatibility();
+                    try
+                    {
+                        cui.CheckBackwardCompatibility();
+                    }
+                    catch
+                    {
+                    }
                 }
             }
         }
 
         private static void HotkeysConfigBackwardCompatibilityTasks()
         {
+            if (SystemOptions.DisableUpload)
+            {
+                foreach (TaskSettings taskSettings in HotkeysConfig.Hotkeys.Select(x => x.TaskSettings))
+                {
+                    if (taskSettings != null)
+                    {
+                        taskSettings.AfterCaptureJob = taskSettings.AfterCaptureJob.Remove(AfterCaptureTasks.UploadImageToHost);
+                    }
+                }
+            }
+
             if (Settings.IsUpgradeFrom("15.0.1"))
             {
                 foreach (TaskSettings taskSettings in HotkeysConfig.Hotkeys.Select(x => x.TaskSettings))

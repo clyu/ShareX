@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2024 ShareX Team
+    Copyright (c) 2007-2025 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -44,7 +44,7 @@ namespace ShareX.ScreenCaptureLib
         private Bitmap previousScreenshot;
         private bool stopRequested;
         private ScrollingCaptureStatus status;
-        private int bestMatchCount, bestMatchIndex;
+        private int bestMatchCount, bestMatchIndex, bestIgnoreBottomOffset;
         private WindowInfo selectedWindow;
         private Rectangle selectedRectangle;
 
@@ -88,6 +88,7 @@ namespace ShareX.ScreenCaptureLib
                 status = ScrollingCaptureStatus.Failed;
                 bestMatchCount = 0;
                 bestMatchIndex = 0;
+                bestIgnoreBottomOffset = 0;
                 Reset();
 
                 ScrollingCaptureRegionForm regionForm = null;
@@ -235,12 +236,9 @@ namespace ShareX.ScreenCaptureLib
             int matchCount = 0;
             int matchIndex = 0;
             int matchLimit = currentImage.Height / 2;
-            int ignoreSideOffset = Math.Max(50, currentImage.Width / 20);
 
-            if (currentImage.Width < ignoreSideOffset * 3)
-            {
-                ignoreSideOffset = 0;
-            }
+            int ignoreSideOffset = Math.Max(50, currentImage.Width / 20);
+            ignoreSideOffset = Math.Min(ignoreSideOffset, currentImage.Width / 3);
 
             Rectangle rect = new Rectangle(ignoreSideOffset, result.Height - currentImage.Height, currentImage.Width - ignoreSideOffset * 2, currentImage.Height);
 
@@ -250,8 +248,31 @@ namespace ShareX.ScreenCaptureLib
             int pixelSize = stride / result.Width;
             IntPtr resultScan0 = bdResult.Scan0 + pixelSize * ignoreSideOffset;
             IntPtr currentImageScan0 = bdCurrentImage.Scan0 + pixelSize * ignoreSideOffset;
-            int rectBottom = rect.Bottom - 1;
             int compareLength = pixelSize * rect.Width;
+
+            int ignoreBottomOffsetMax = currentImage.Height / 3;
+            int ignoreBottomOffset = Math.Max(50, currentImage.Height / 10);
+
+            if (Options.AutoIgnoreBottomEdge)
+            {
+                IntPtr resultScan0Last = resultScan0 + (result.Height - 1) * stride;
+                IntPtr currentImageScan0Last = currentImageScan0 + (currentImage.Height - 1) * stride;
+
+                for (int i = 0; i <= ignoreBottomOffsetMax; i++)
+                {
+                    if (NativeMethods.memcmp(resultScan0Last - i * stride, currentImageScan0Last - i * stride, compareLength) != 0)
+                    {
+                        ignoreBottomOffset += i;
+                        break;
+                    }
+                }
+
+                ignoreBottomOffset = Math.Max(ignoreBottomOffset, bestIgnoreBottomOffset);
+            }
+
+            ignoreBottomOffset = Math.Min(ignoreBottomOffset, ignoreBottomOffsetMax);
+
+            int rectBottom = rect.Bottom - ignoreBottomOffset - 1;
 
             for (int currentImageY = currentImage.Height - 1; currentImageY >= 0 && matchCount < matchLimit; currentImageY--)
             {
@@ -285,6 +306,7 @@ namespace ShareX.ScreenCaptureLib
             {
                 matchCount = bestMatchCount;
                 matchIndex = bestMatchIndex;
+                ignoreBottomOffset = bestIgnoreBottomOffset;
                 bestGuess = true;
             }
 
@@ -298,18 +320,19 @@ namespace ShareX.ScreenCaptureLib
                     {
                         bestMatchCount = matchCount;
                         bestMatchIndex = matchIndex;
+                        bestIgnoreBottomOffset = ignoreBottomOffset;
                     }
 
-                    Bitmap newResult = new Bitmap(result.Width, result.Height + matchHeight);
+                    Bitmap newResult = new Bitmap(result.Width, result.Height - ignoreBottomOffset + matchHeight);
 
                     using (Graphics g = Graphics.FromImage(newResult))
                     {
                         g.CompositingMode = CompositingMode.SourceCopy;
                         g.InterpolationMode = InterpolationMode.NearestNeighbor;
 
-                        g.DrawImage(result, new Rectangle(0, 0, result.Width, result.Height),
-                            new Rectangle(0, 0, result.Width, result.Height), GraphicsUnit.Pixel);
-                        g.DrawImage(currentImage, new Rectangle(0, result.Height, currentImage.Width, matchHeight),
+                        g.DrawImage(result, new Rectangle(0, 0, result.Width, result.Height - ignoreBottomOffset),
+                            new Rectangle(0, 0, result.Width, result.Height - ignoreBottomOffset), GraphicsUnit.Pixel);
+                        g.DrawImage(currentImage, new Rectangle(0, result.Height - ignoreBottomOffset, currentImage.Width, matchHeight),
                             new Rectangle(0, matchIndex + 1, currentImage.Width, matchHeight), GraphicsUnit.Pixel);
                     }
 

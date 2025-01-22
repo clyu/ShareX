@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2024 ShareX Team
+    Copyright (c) 2007-2025 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -96,12 +96,21 @@ namespace ShareX
             tsmiShareSelectedURL.HideImageMargin();
             tsmiTrayRecentItems.HideImageMargin();
 
+            AfterCaptureTasks[] ignoreAfterCaptureTasks = null;
+
+            if (SystemOptions.DisableUpload)
+            {
+                ignoreAfterCaptureTasks = new AfterCaptureTasks[] { AfterCaptureTasks.ShowBeforeUploadWindow, AfterCaptureTasks.UploadImageToHost };
+            }
+
             AddMultiEnumItems<AfterCaptureTasks>(x => Program.DefaultTaskSettings.AfterCaptureJob = Program.DefaultTaskSettings.AfterCaptureJob.Swap(x),
-                tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks);
+                new ToolStripDropDownItem[] { tsddbAfterCaptureTasks, tsmiTrayAfterCaptureTasks }, ignoreAfterCaptureTasks);
             tsddbAfterCaptureTasks.DropDownOpening += TsddbAfterCaptureTasks_DropDownOpening;
             tsmiTrayAfterCaptureTasks.DropDownOpening += TsmiTrayAfterCaptureTasks_DropDownOpening;
+
             AddMultiEnumItems<AfterUploadTasks>(x => Program.DefaultTaskSettings.AfterUploadJob = Program.DefaultTaskSettings.AfterUploadJob.Swap(x),
-                tsddbAfterUploadTasks, tsmiTrayAfterUploadTasks);
+                new ToolStripDropDownItem[] { tsddbAfterUploadTasks, tsmiTrayAfterUploadTasks });
+
             AddEnumItems<ImageDestination>(x =>
             {
                 Program.DefaultTaskSettings.ImageDestination = x;
@@ -123,6 +132,7 @@ namespace ShareX
                 tsmiImageFileUploaders.PerformClick();
                 tsmiTrayImageFileUploaders.PerformClick();
             }, tsmiImageFileUploaders, tsmiTrayImageFileUploaders);
+
             AddEnumItems<TextDestination>(x =>
             {
                 Program.DefaultTaskSettings.TextDestination = x;
@@ -138,14 +148,18 @@ namespace ShareX
             }, tsmiTextUploaders, tsmiTrayTextUploaders);
             tsmiTextFileUploaders = (ToolStripDropDownItem)tsmiTextUploaders.DropDownItems[tsmiTextUploaders.DropDownItems.Count - 1];
             tsmiTrayTextFileUploaders = (ToolStripDropDownItem)tsmiTrayTextUploaders.DropDownItems[tsmiTrayTextUploaders.DropDownItems.Count - 1];
+
             AddEnumItems<FileDestination>(x =>
             {
                 Program.DefaultTaskSettings.TextFileDestination = x;
                 tsmiTextFileUploaders.PerformClick();
                 tsmiTrayTextFileUploaders.PerformClick();
             }, tsmiTextFileUploaders, tsmiTrayTextFileUploaders);
+
             AddEnumItems<FileDestination>(x => Program.DefaultTaskSettings.FileDestination = x, tsmiFileUploaders, tsmiTrayFileUploaders);
+
             AddEnumItems<UrlShortenerType>(x => Program.DefaultTaskSettings.URLShortenerDestination = x, tsmiURLShorteners, tsmiTrayURLShorteners);
+
             AddEnumItems<URLSharingServices>(x => Program.DefaultTaskSettings.URLSharingServiceDestination = x, tsmiURLSharingServices, tsmiTrayURLSharingServices);
 
             foreach (UrlShortenerType urlShortener in Helpers.GetEnums<UrlShortenerType>())
@@ -195,6 +209,26 @@ namespace ShareX
             tsmiTrayDNSChanger.Visible = false;
 #endif
 
+            if (SystemOptions.DisableUpload)
+            {
+                tsddbUpload.Visible = false;
+                tsddbAfterUploadTasks.Visible = false;
+                tsddbDestinations.Visible = false;
+                tsmiTestImageUpload.Visible = false;
+                tsmiTestTextUpload.Visible = false;
+                tsmiTestFileUpload.Visible = false;
+                tsmiTestURLShortener.Visible = false;
+                tsmiTestURLSharing.Visible = false;
+
+                tsmiTrayUpload.Visible = false;
+                tsmiTrayAfterUploadTasks.Visible = false;
+                tsmiTrayDestinations.Visible = false;
+
+                tsmiUploadSelectedFile.Visible = false;
+                tsmiShortenSelectedURL.Visible = false;
+                tsmiShareSelectedURL.Visible = false;
+            }
+
             HandleCreated += MainForm_HandleCreated;
         }
 
@@ -218,7 +252,7 @@ namespace ShareX
             }
 
             tsMain.Width = tsMain.PreferredSize.Width;
-            int height = Size.Height + tsMain.PreferredSize.Height - tsMain.Height;
+            int height = Math.Max(Size.Height + tsMain.PreferredSize.Height - tsMain.Height, MinimumSize.Height);
             MinimumSize = new Size(MinimumSize.Width, height);
 
             if (Program.Settings.RememberMainFormSize && !Program.Settings.MainFormSize.IsEmpty)
@@ -495,9 +529,14 @@ namespace ShareX
             }
         }
 
-        private void AddMultiEnumItems<T>(Action<T> selectedEnum, params ToolStripDropDownItem[] parents) where T : Enum
+        private void AddMultiEnumItems<T>(Action<T> selectedEnum, ToolStripDropDownItem[] parents, T[] ignoreEnums = null) where T : Enum
         {
-            T[] enums = Helpers.GetEnums<T>().Skip(1).ToArray();
+            if (ignoreEnums == null)
+            {
+                ignoreEnums = new T[0];
+            }
+
+            T[] enums = Helpers.GetEnums<T>().Skip(1).Except(ignoreEnums).ToArray();
 
             foreach (ToolStripDropDownItem parent in parents)
             {
@@ -505,6 +544,7 @@ namespace ShareX
                 {
                     T currentEnum = enums[i];
                     ToolStripMenuItem tsmi = new ToolStripMenuItem(currentEnum.GetLocalizedDescription());
+                    tsmi.Tag = currentEnum;
                     tsmi.Image = TaskHelpers.FindMenuIcon(currentEnum);
 
                     int index = i;
@@ -518,8 +558,6 @@ namespace ShareX
                         }
 
                         selectedEnum(currentEnum);
-
-                        UpdateUploaderMenuNames();
                     };
 
                     parent.DropDownItems.Add(tsmi);
@@ -704,7 +742,7 @@ namespace ShareX
                         }
                     }
 
-                    tsmiUploadSelectedFile.Visible = uim.SelectedItem.IsFileExist;
+                    tsmiUploadSelectedFile.Visible = !SystemOptions.DisableUpload && uim.SelectedItem.IsFileExist;
                     tsmiDownloadSelectedURL.Visible = uim.SelectedItem.IsFileURL;
                     tsmiEditSelectedFile.Visible = uim.SelectedItem.IsImageFile;
                     tsmiBeautifyImage.Visible = uim.SelectedItem.IsImageFile;
@@ -713,8 +751,8 @@ namespace ShareX
                     UpdateActionsMenu(uim.SelectedItem.Info.FilePath);
                     tsmiDeleteSelectedItem.Visible = true;
                     tsmiDeleteSelectedFile.Visible = uim.SelectedItem.IsFileExist;
-                    tsmiShortenSelectedURL.Visible = uim.SelectedItem.IsURLExist;
-                    tsmiShareSelectedURL.Visible = uim.SelectedItem.IsURLExist;
+                    tsmiShortenSelectedURL.Visible = !SystemOptions.DisableUpload && uim.SelectedItem.IsURLExist;
+                    tsmiShareSelectedURL.Visible = !SystemOptions.DisableUpload && uim.SelectedItem.IsURLExist;
                     tsmiGoogleLens.Visible = uim.SelectedItem.IsURLExist;
                     tsmiBingVisualSearch.Visible = uim.SelectedItem.IsURLExist;
                     tsmiShowQRCode.Visible = uim.SelectedItem.IsURLExist;

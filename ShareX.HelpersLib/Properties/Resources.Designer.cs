@@ -1280,6 +1280,24 @@ namespace ShareX.HelpersLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Make active window borderless.
+        /// </summary>
+        internal static string HotkeyType_ActiveWindowBorderless {
+            get {
+                return ResourceManager.GetString("HotkeyType_ActiveWindowBorderless", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Make active window top most.
+        /// </summary>
+        internal static string HotkeyType_ActiveWindowTopMost {
+            get {
+                return ResourceManager.GetString("HotkeyType_ActiveWindowTopMost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto capture.
         /// </summary>
         internal static string HotkeyType_AutoCapture {
@@ -1640,6 +1658,15 @@ namespace ShareX.HelpersLib.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Pin to screen (Close all).
+        /// </summary>
+        internal static string HotkeyType_PinToScreenCloseAll {
+            get {
+                return ResourceManager.GetString("HotkeyType_PinToScreenCloseAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pin to screen (From clipboard).
         /// </summary>
         internal static string HotkeyType_PinToScreenFromClipboard {
@@ -1924,6 +1951,51 @@ namespace ShareX.HelpersLib.Properties {
         internal static string HSB_ToString_ {
             get {
                 return ResourceManager.GetString("HSB_ToString_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Color.
+        /// </summary>
+        internal static string ImageBeautifierBackgroundType_Color {
+            get {
+                return ResourceManager.GetString("ImageBeautifierBackgroundType_Color", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Desktop.
+        /// </summary>
+        internal static string ImageBeautifierBackgroundType_Desktop {
+            get {
+                return ResourceManager.GetString("ImageBeautifierBackgroundType_Desktop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Gradient.
+        /// </summary>
+        internal static string ImageBeautifierBackgroundType_Gradient {
+            get {
+                return ResourceManager.GetString("ImageBeautifierBackgroundType_Gradient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Image.
+        /// </summary>
+        internal static string ImageBeautifierBackgroundType_Image {
+            get {
+                return ResourceManager.GetString("ImageBeautifierBackgroundType_Image", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Transparent.
+        /// </summary>
+        internal static string ImageBeautifierBackgroundType_Transparent {
+            get {
+                return ResourceManager.GetString("ImageBeautifierBackgroundType_Transparent", resourceCulture);
             }
         }
         
@@ -2864,42 +2936,6 @@ namespace ShareX.HelpersLib.Properties {
         internal static string ReplCodeMenuEntry_yy_Current_year__2_digits_ {
             get {
                 return ResourceManager.GetString("ReplCodeMenuEntry_yy_Current_year__2_digits_", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Response headers.
-        /// </summary>
-        internal static string ResponseType_Headers {
-            get {
-                return ResourceManager.GetString("ResponseType_Headers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Location header.
-        /// </summary>
-        internal static string ResponseType_LocationHeader {
-            get {
-                return ResourceManager.GetString("ResponseType_LocationHeader", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Redirection URL.
-        /// </summary>
-        internal static string ResponseType_RedirectionURL {
-            get {
-                return ResourceManager.GetString("ResponseType_RedirectionURL", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Response text.
-        /// </summary>
-        internal static string ResponseType_Text {
-            get {
-                return ResourceManager.GetString("ResponseType_Text", resourceCulture);
             }
         }
         

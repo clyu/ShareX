@@ -526,7 +526,7 @@
     <value>btnAfterCapture</value>
   </data>
   <data name="&gt;&gt;btnAfterCapture.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnAfterCapture.Parent" xml:space="preserve">
     <value>tpTask</value>
@@ -556,7 +556,7 @@
     <value>btnAfterUpload</value>
   </data>
   <data name="&gt;&gt;btnAfterUpload.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnAfterUpload.Parent" xml:space="preserve">
     <value>tpTask</value>
@@ -628,7 +628,7 @@
     <value>btnDestinations</value>
   </data>
   <data name="&gt;&gt;btnDestinations.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnDestinations.Parent" xml:space="preserve">
     <value>tpTask</value>
@@ -664,7 +664,7 @@
     <value>btnTask</value>
   </data>
   <data name="&gt;&gt;btnTask.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MenuButton, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;btnTask.Parent" xml:space="preserve">
     <value>tpTask</value>
@@ -756,6 +756,111 @@
   <data name="&gt;&gt;tpGeneralMain.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="btnCustomActionCompletedSoundPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="btnCustomActionCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>536, 413</value>
+  </data>
+  <data name="btnCustomActionCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>26, 23</value>
+  </data>
+  <data name="btnCustomActionCompletedSoundPath.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="btnCustomActionCompletedSoundPath.Text" xml:space="preserve">
+    <value>...</value>
+  </data>
+  <data name="&gt;&gt;btnCustomActionCompletedSoundPath.Name" xml:space="preserve">
+    <value>btnCustomActionCompletedSoundPath</value>
+  </data>
+  <data name="&gt;&gt;btnCustomActionCompletedSoundPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnCustomActionCompletedSoundPath.Parent" xml:space="preserve">
+    <value>tpNotifications</value>
+  </data>
+  <data name="&gt;&gt;btnCustomActionCompletedSoundPath.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="txtCustomActionCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
+    <value>248, 414</value>
+  </data>
+  <data name="txtCustomActionCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
+    <value>280, 20</value>
+  </data>
+  <data name="txtCustomActionCompletedSoundPath.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="&gt;&gt;txtCustomActionCompletedSoundPath.Name" xml:space="preserve">
+    <value>txtCustomActionCompletedSoundPath</value>
+  </data>
+  <data name="&gt;&gt;txtCustomActionCompletedSoundPath.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;txtCustomActionCompletedSoundPath.Parent" xml:space="preserve">
+    <value>tpNotifications</value>
+  </data>
+  <data name="&gt;&gt;txtCustomActionCompletedSoundPath.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 416</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.Size" type="System.Drawing.Size, System.Drawing">
+    <value>201, 17</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <data name="cbUseCustomActionCompletedSound.Text" xml:space="preserve">
+    <value>Use custom action completed sound:</value>
+  </data>
+  <data name="&gt;&gt;cbUseCustomActionCompletedSound.Name" xml:space="preserve">
+    <value>cbUseCustomActionCompletedSound</value>
+  </data>
+  <data name="&gt;&gt;cbUseCustomActionCompletedSound.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbUseCustomActionCompletedSound.Parent" xml:space="preserve">
+    <value>tpNotifications</value>
+  </data>
+  <data name="&gt;&gt;cbUseCustomActionCompletedSound.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 56</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.Size" type="System.Drawing.Size, System.Drawing">
+    <value>196, 17</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="cbPlaySoundAfterAction.Text" xml:space="preserve">
+    <value>Play sound after action is completed</value>
+  </data>
+  <data name="&gt;&gt;cbPlaySoundAfterAction.Name" xml:space="preserve">
+    <value>cbPlaySoundAfterAction</value>
+  </data>
+  <data name="&gt;&gt;cbPlaySoundAfterAction.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbPlaySoundAfterAction.Parent" xml:space="preserve">
+    <value>tpNotifications</value>
+  </data>
+  <data name="&gt;&gt;cbPlaySoundAfterAction.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
@@ -763,13 +868,13 @@
     <value>NoControl</value>
   </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 56</value>
+    <value>8, 80</value>
   </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.Size" type="System.Drawing.Size, System.Drawing">
     <value>242, 17</value>
   </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+    <value>3</value>
   </data>
   <data name="cbShowToastNotificationAfterTaskCompleted.Text" xml:space="preserve">
     <value>Show toast notification after task is completed</value>
@@ -784,19 +889,19 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;cbShowToastNotificationAfterTaskCompleted.ZOrder" xml:space="preserve">
-    <value>0</value>
+    <value>4</value>
   </data>
   <data name="btnCustomErrorSoundPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnCustomErrorSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 365</value>
+    <value>536, 437</value>
   </data>
   <data name="btnCustomErrorSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 23</value>
   </data>
   <data name="btnCustomErrorSoundPath.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+    <value>16</value>
   </data>
   <data name="btnCustomErrorSoundPath.Text" xml:space="preserve">
     <value>...</value>
@@ -811,19 +916,19 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;btnCustomErrorSoundPath.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>5</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 341</value>
+    <value>536, 389</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 23</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
+    <value>10</value>
   </data>
   <data name="btnCustomTaskCompletedSoundPath.Text" xml:space="preserve">
     <value>...</value>
@@ -838,19 +943,19 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;btnCustomTaskCompletedSoundPath.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>6</value>
   </data>
   <data name="btnCustomCaptureSoundPath.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnCustomCaptureSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>536, 317</value>
+    <value>536, 365</value>
   </data>
   <data name="btnCustomCaptureSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>26, 23</value>
   </data>
   <data name="btnCustomCaptureSoundPath.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>7</value>
   </data>
   <data name="btnCustomCaptureSoundPath.Text" xml:space="preserve">
     <value>...</value>
@@ -865,16 +970,16 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;btnCustomCaptureSoundPath.ZOrder" xml:space="preserve">
-    <value>3</value>
+    <value>7</value>
   </data>
   <data name="txtCustomErrorSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 366</value>
+    <value>248, 438</value>
   </data>
   <data name="txtCustomErrorSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 20</value>
   </data>
   <data name="txtCustomErrorSoundPath.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
+    <value>15</value>
   </data>
   <data name="&gt;&gt;txtCustomErrorSoundPath.Name" xml:space="preserve">
     <value>txtCustomErrorSoundPath</value>
@@ -886,16 +991,16 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;txtCustomErrorSoundPath.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>8</value>
   </data>
   <data name="txtCustomTaskCompletedSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 342</value>
+    <value>248, 390</value>
   </data>
   <data name="txtCustomTaskCompletedSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 20</value>
   </data>
   <data name="txtCustomTaskCompletedSoundPath.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+    <value>9</value>
   </data>
   <data name="&gt;&gt;txtCustomTaskCompletedSoundPath.Name" xml:space="preserve">
     <value>txtCustomTaskCompletedSoundPath</value>
@@ -907,16 +1012,16 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;txtCustomTaskCompletedSoundPath.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>9</value>
   </data>
   <data name="txtCustomCaptureSoundPath.Location" type="System.Drawing.Point, System.Drawing">
-    <value>248, 318</value>
+    <value>248, 366</value>
   </data>
   <data name="txtCustomCaptureSoundPath.Size" type="System.Drawing.Size, System.Drawing">
     <value>280, 20</value>
   </data>
   <data name="txtCustomCaptureSoundPath.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>6</value>
   </data>
   <data name="&gt;&gt;txtCustomCaptureSoundPath.Name" xml:space="preserve">
     <value>txtCustomCaptureSoundPath</value>
@@ -928,7 +1033,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;txtCustomCaptureSoundPath.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>10</value>
   </data>
   <data name="cbUseCustomErrorSound.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -937,13 +1042,13 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomErrorSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 368</value>
+    <value>8, 440</value>
   </data>
   <data name="cbUseCustomErrorSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>141, 17</value>
   </data>
   <data name="cbUseCustomErrorSound.TabIndex" type="System.Int32, mscorlib">
-    <value>10</value>
+    <value>14</value>
   </data>
   <data name="cbUseCustomErrorSound.Text" xml:space="preserve">
     <value>Use custom error sound:</value>
@@ -958,7 +1063,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;cbUseCustomErrorSound.ZOrder" xml:space="preserve">
-    <value>7</value>
+    <value>11</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -967,13 +1072,13 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 344</value>
+    <value>8, 392</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>192, 17</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+    <value>8</value>
   </data>
   <data name="cbUseCustomTaskCompletedSound.Text" xml:space="preserve">
     <value>Use custom task completed sound:</value>
@@ -988,7 +1093,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;cbUseCustomTaskCompletedSound.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>12</value>
   </data>
   <data name="cbUseCustomCaptureSound.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -997,13 +1102,13 @@
     <value>NoControl</value>
   </data>
   <data name="cbUseCustomCaptureSound.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 320</value>
+    <value>8, 368</value>
   </data>
   <data name="cbUseCustomCaptureSound.Size" type="System.Drawing.Size, System.Drawing">
     <value>156, 17</value>
   </data>
   <data name="cbUseCustomCaptureSound.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>5</value>
   </data>
   <data name="cbUseCustomCaptureSound.Text" xml:space="preserve">
     <value>Use custom capture sound:</value>
@@ -1018,7 +1123,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;cbUseCustomCaptureSound.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>13</value>
   </data>
   <data name="cbToastWindowAutoHide.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1293,6 +1398,36 @@
   <data name="&gt;&gt;nudToastWindowFadeDuration.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="cbDisableNotificationsOnFullscreen.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="cbDisableNotificationsOnFullscreen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="cbDisableNotificationsOnFullscreen.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 216</value>
+  </data>
+  <data name="cbDisableNotificationsOnFullscreen.Size" type="System.Drawing.Size, System.Drawing">
+    <value>209, 17</value>
+  </data>
+  <data name="cbDisableNotificationsOnFullscreen.TabIndex" type="System.Int32, mscorlib">
+    <value>19</value>
+  </data>
+  <data name="cbDisableNotificationsOnFullscreen.Text" xml:space="preserve">
+    <value>Disable toast notifications on fullscreen</value>
+  </data>
+  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.Name" xml:space="preserve">
+    <value>cbDisableNotificationsOnFullscreen</value>
+  </data>
+  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.Type" xml:space="preserve">
+    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.Parent" xml:space="preserve">
+    <value>gbToastWindow</value>
+  </data>
+  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
   <data name="nudToastWindowDuration.Location" type="System.Drawing.Point, System.Drawing">
     <value>176, 20</value>
   </data>
@@ -1315,7 +1450,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;nudToastWindowDuration.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>12</value>
   </data>
   <data name="lblToastWindowMiddleClickAction.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1345,7 +1480,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowMiddleClickAction.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>13</value>
   </data>
   <data name="lblToastWindowRightClickAction.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1375,7 +1510,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowRightClickAction.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>14</value>
   </data>
   <data name="lblToastWindowLeftClickAction.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1405,7 +1540,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowLeftClickAction.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>15</value>
   </data>
   <data name="lblToastWindowSize.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1435,7 +1570,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowSize.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>16</value>
   </data>
   <data name="lblToastWindowPlacement.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1465,7 +1600,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowPlacement.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>17</value>
   </data>
   <data name="lblToastWindowFadeDuration.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1495,7 +1630,7 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowFadeDuration.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>18</value>
   </data>
   <data name="lblToastWindowDuration.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1525,16 +1660,16 @@
     <value>gbToastWindow</value>
   </data>
   <data name="&gt;&gt;lblToastWindowDuration.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>19</value>
   </data>
   <data name="gbToastWindow.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 80</value>
+    <value>8, 104</value>
   </data>
   <data name="gbToastWindow.Size" type="System.Drawing.Size, System.Drawing">
-    <value>552, 224</value>
+    <value>552, 248</value>
   </data>
   <data name="gbToastWindow.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>4</value>
   </data>
   <data name="gbToastWindow.Text" xml:space="preserve">
     <value>Toast notification</value>
@@ -1549,67 +1684,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;gbToastWindow.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="cbDisableNotificationsOnFullscreen.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbDisableNotificationsOnFullscreen.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cbDisableNotificationsOnFullscreen.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 416</value>
-  </data>
-  <data name="cbDisableNotificationsOnFullscreen.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 17</value>
-  </data>
-  <data name="cbDisableNotificationsOnFullscreen.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
-  </data>
-  <data name="cbDisableNotificationsOnFullscreen.Text" xml:space="preserve">
-    <value>Disable notifications on fullscreen</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.Name" xml:space="preserve">
-    <value>cbDisableNotificationsOnFullscreen</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.Parent" xml:space="preserve">
-    <value>tpNotifications</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotificationsOnFullscreen.ZOrder" xml:space="preserve">
-    <value>11</value>
-  </data>
-  <data name="cbDisableNotifications.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="cbDisableNotifications.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="cbDisableNotifications.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 392</value>
-  </data>
-  <data name="cbDisableNotifications.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 17</value>
-  </data>
-  <data name="cbDisableNotifications.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="cbDisableNotifications.Text" xml:space="preserve">
-    <value>Disable notifications</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotifications.Name" xml:space="preserve">
-    <value>cbDisableNotifications</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotifications.Type" xml:space="preserve">
-    <value>System.Windows.Forms.CheckBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotifications.Parent" xml:space="preserve">
-    <value>tpNotifications</value>
-  </data>
-  <data name="&gt;&gt;cbDisableNotifications.ZOrder" xml:space="preserve">
-    <value>12</value>
   </data>
   <data name="cbPlaySoundAfterCapture.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1639,7 +1714,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;cbPlaySoundAfterCapture.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>15</value>
   </data>
   <data name="cbPlaySoundAfterUpload.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1669,7 +1744,7 @@
     <value>tpNotifications</value>
   </data>
   <data name="&gt;&gt;cbPlaySoundAfterUpload.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>16</value>
   </data>
   <data name="tpNotifications.Location" type="System.Drawing.Point, System.Drawing">
     <value>4, 22</value>
@@ -5515,7 +5590,7 @@
     <value>NoControl</value>
   </data>
   <data name="btnAutoIncrementNumber.Location" type="System.Drawing.Point, System.Drawing">
-    <value>104, 176</value>
+    <value>120, 176</value>
   </data>
   <data name="btnAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
     <value>96, 23</value>
@@ -5572,7 +5647,7 @@
     <value>8, 177</value>
   </data>
   <data name="nudAutoIncrementNumber.Size" type="System.Drawing.Size, System.Drawing">
-    <value>88, 20</value>
+    <value>104, 20</value>
   </data>
   <data name="nudAutoIncrementNumber.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -6067,7 +6142,7 @@
     <value>lvUploaderFiltersList</value>
   </data>
   <data name="&gt;&gt;lvUploaderFiltersList.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvUploaderFiltersList.Parent" xml:space="preserve">
     <value>tpUploaderFilters</value>
@@ -6520,7 +6595,7 @@
     <value>lvActions</value>
   </data>
   <data name="&gt;&gt;lvActions.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvActions.Parent" xml:space="preserve">
     <value>pActions</value>
@@ -6766,7 +6841,7 @@
     <value>lvWatchFolderList</value>
   </data>
   <data name="&gt;&gt;lvWatchFolderList.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.MyListView, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;lvWatchFolderList.Parent" xml:space="preserve">
     <value>tpWatchFolders</value>
@@ -7225,7 +7300,7 @@
     <value>tttvMain</value>
   </data>
   <data name="&gt;&gt;tttvMain.Type" xml:space="preserve">
-    <value>ShareX.HelpersLib.TabToTreeView, ShareX.HelpersLib, Version=16.0.4.0, Culture=neutral, PublicKeyToken=null</value>
+    <value>ShareX.HelpersLib.TabToTreeView, ShareX.HelpersLib, Version=16.1.3.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;tttvMain.Parent" xml:space="preserve">
     <value>$this</value>

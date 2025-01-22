@@ -2,7 +2,7 @@
 
 /*
     ShareX - A program that allows you to take screenshots and share any file type
-    Copyright (c) 2007-2024 ShareX Team
+    Copyright (c) 2007-2025 ShareX Team
 
     This program is free software; you can redistribute it and/or
     modify it under the terms of the GNU General Public License
@@ -40,6 +40,7 @@ namespace ShareX.ScreenCaptureLib
         private static ScrollingCaptureForm instance;
 
         public event Action<Bitmap> UploadRequested;
+        public event Action PlayNotificationSound;
 
         public ScrollingCaptureOptions Options { get; private set; }
 
@@ -56,7 +57,7 @@ namespace ShareX.ScreenCaptureLib
             manager = new ScrollingCaptureManager(Options);
         }
 
-        public static async Task StartStopScrollingCapture(ScrollingCaptureOptions options, Action<Bitmap> uploadRequested = null)
+        public static async Task StartStopScrollingCapture(ScrollingCaptureOptions options, Action<Bitmap> uploadRequested = null, Action playNotificationSound = null)
         {
             if (instance == null || instance.IsDisposed)
             {
@@ -69,6 +70,11 @@ namespace ShareX.ScreenCaptureLib
                         if (uploadRequested != null)
                         {
                             instance.UploadRequested += uploadRequested;
+                        }
+
+                        if (playNotificationSound != null)
+                        {
+                            instance.PlayNotificationSound += playNotificationSound;
                         }
 
                         instance.Show();
@@ -116,6 +122,7 @@ namespace ShareX.ScreenCaptureLib
             WindowState = FormWindowState.Minimized;
             btnCapture.Enabled = false;
             btnUpload.Enabled = false;
+            btnCopy.Enabled = false;
             btnOptions.Enabled = false;
             lblResultSize.Text = "";
             ResetPictureBox();
@@ -136,6 +143,8 @@ namespace ShareX.ScreenCaptureLib
                         pbStatus.Image = Resources.control_record_green;
                         break;
                 }
+
+                OnPlayNotificationSound();
             }
             catch (Exception e)
             {
@@ -162,6 +171,7 @@ namespace ShareX.ScreenCaptureLib
             if (bmp != null)
             {
                 btnUpload.Enabled = true;
+                btnCopy.Enabled = true;
                 pbOutput.Image = bmp;
                 pOutput.AutoScrollPosition = new Point(0, 0);
                 lblResultSize.Text = $"{bmp.Width}x{bmp.Height}";
@@ -191,9 +201,22 @@ namespace ShareX.ScreenCaptureLib
             }
         }
 
+        private void CopyResult()
+        {
+            if (manager.Result != null)
+            {
+                ClipboardHelpers.CopyImage(manager.Result);
+            }
+        }
+
         protected void OnUploadRequested(Bitmap bmp)
         {
             UploadRequested?.Invoke(bmp);
+        }
+
+        protected void OnPlayNotificationSound()
+        {
+            PlayNotificationSound?.Invoke();
         }
 
         private async void ScrollingCaptureForm_Load(object sender, EventArgs e)
@@ -214,6 +237,11 @@ namespace ShareX.ScreenCaptureLib
         private void btnUpload_Click(object sender, EventArgs e)
         {
             UploadResult();
+        }
+
+        private void btnCopy_Click(object sender, EventArgs e)
+        {
+            CopyResult();
         }
 
         private void btnOptions_Click(object sender, EventArgs e)
