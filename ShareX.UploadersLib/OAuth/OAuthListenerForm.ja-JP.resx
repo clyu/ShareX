@@ -117,34 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblAdapters.Text" xml:space="preserve">
-    <value>Adaptoare de rețea:</value>
-  </data>
-  <data name="lblPreferredDNS.Text" xml:space="preserve">
-    <value>Server DNS preferat:</value>
-  </data>
-  <data name="lblAlternateDNS.Text" xml:space="preserve">
-    <value>Server DNS alternativ:</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Aplicați</value>
-  </data>
   <data name="btnCancel.Text" xml:space="preserve">
-    <value>Închideți</value>
+    <value>キャンセル</value>
   </data>
-  <data name="lblDNS.Text" xml:space="preserve">
-    <value>Servere DNS:</value>
-  </data>
-  <data name="cbAutomatic.Text" xml:space="preserve">
-    <value>Obțineți adresa serverului DNS automat</value>
-  </data>
-  <data name="btnPingPrimary.Text" xml:space="preserve">
-    <value>Ping</value>
-  </data>
-  <data name="btnPingSecondary.Text" xml:space="preserve">
-    <value>Ping</value>
+  <data name="label1.Text" xml:space="preserve">
+    <value>ブラウザでの認証完了を待機中...</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ShareX - Schimbător DNS</value>
+    <value>ShareX - 認証</value>
   </data>
 </root>

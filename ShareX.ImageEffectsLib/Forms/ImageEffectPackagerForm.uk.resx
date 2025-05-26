@@ -117,34 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Zamknij</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Zastosuj</value>
-  </data>
-  <data name="btnPingPrimary.Text" xml:space="preserve">
-    <value>Ping</value>
-  </data>
-  <data name="btnPingSecondary.Text" xml:space="preserve">
-    <value>Ping</value>
+  <data name="btnPackage.Text" xml:space="preserve">
+    <value>Упакувати</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ShareX - Zmiana DNS</value>
+    <value>ShareX — Пакувальник ефектів зображення</value>
   </data>
-  <data name="cbAutomatic.Text" xml:space="preserve">
-    <value>Uzyskaj adres serwera DNS automatycznie</value>
+  <data name="btnOpenImageEffectsFolder.Text" xml:space="preserve">
+    <value>Відкрити теку з ефектами зображення...</value>
   </data>
-  <data name="lblAdapters.Text" xml:space="preserve">
-    <value>Karty sieciowe:</value>
+  <data name="lblPackageFilePath.Text" xml:space="preserve">
+    <value>Шлях до файлу пакунка:</value>
   </data>
-  <data name="lblAlternateDNS.Text" xml:space="preserve">
-    <value>Alternatywny serwer DNS:</value>
-  </data>
-  <data name="lblDNS.Text" xml:space="preserve">
-    <value>Serwery DNS:</value>
-  </data>
-  <data name="lblPreferredDNS.Text" xml:space="preserve">
-    <value>Preferowany serwer DNS:</value>
+  <data name="lblAssetsFolderPath.Text" xml:space="preserve">
+    <value>Шлях до теки ресурсів:</value>
   </data>
 </root>

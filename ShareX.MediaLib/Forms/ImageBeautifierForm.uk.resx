@@ -117,34 +117,61 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="btnCopy.ToolTip" xml:space="preserve">
+    <value>Скопіювати</value>
+  </data>
+  <data name="btnPrint.ToolTip" xml:space="preserve">
+    <value>Друк...</value>
+  </data>
+  <data name="btnResetOptions.Text" xml:space="preserve">
+    <value>Скинути налаштування...</value>
+  </data>
+  <data name="btnSave.ToolTip" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="btnSaveAs.ToolTip" xml:space="preserve">
+    <value>Зберегти як...</value>
+  </data>
+  <data name="btnShadowColor.Text" xml:space="preserve">
+    <value>Колір...</value>
+  </data>
+  <data name="btnUpload.ToolTip" xml:space="preserve">
+    <value>Вивантажити</value>
+  </data>
+  <data name="cbSmartPadding.Text" xml:space="preserve">
+    <value>Розумні відступи</value>
+  </data>
+  <data name="btnBackgroundImageFilePathBrowse.Text" xml:space="preserve">
+    <value>Відкрити файл зображення...</value>
+  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ShareX - 更換 DNS</value>
+    <value>ShareX — Покращувач зображень</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>關閉</value>
+  <data name="gbShadow.Text" xml:space="preserve">
+    <value>Тінь</value>
   </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>套用</value>
+  <data name="lblBackground.Text" xml:space="preserve">
+    <value>Тло:</value>
   </data>
-  <data name="cbAutomatic.Text" xml:space="preserve">
-    <value>自動獲取 DNS 伺服器位址</value>
+  <data name="lblMargin.Text" xml:space="preserve">
+    <value>Зовнішній відступ:</value>
   </data>
-  <data name="lblAdapters.Text" xml:space="preserve">
-    <value>網路介面卡：</value>
+  <data name="lblPadding.Text" xml:space="preserve">
+    <value>Внутрішній відступ:</value>
   </data>
-  <data name="lblAlternateDNS.Text" xml:space="preserve">
-    <value>備用 DNS 伺服器：</value>
+  <data name="lblShadowAngle.Text" xml:space="preserve">
+    <value>Кут:</value>
   </data>
-  <data name="lblDNS.Text" xml:space="preserve">
-    <value>DNS 伺服器：</value>
+  <data name="lblShadowDistance.Text" xml:space="preserve">
+    <value>Відстань:</value>
   </data>
-  <data name="lblPreferredDNS.Text" xml:space="preserve">
-    <value>首選 DNS 伺服器：</value>
+  <data name="lblShadowOpacity.Text" xml:space="preserve">
+    <value>Непрозорість:</value>
   </data>
-  <data name="btnPingPrimary.Text" xml:space="preserve">
-    <value>Ping</value>
+  <data name="lblShadowRadius.Text" xml:space="preserve">
+    <value>Радіус:</value>
   </data>
-  <data name="btnPingSecondary.Text" xml:space="preserve">
-    <value>Ping</value>
+  <data name="lblRoundedCorner.Text" xml:space="preserve">
+    <value>Заокруглений кут:</value>
   </data>
 </root>

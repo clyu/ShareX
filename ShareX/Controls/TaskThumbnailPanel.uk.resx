@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,28 +117,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>ShareX DNS Wijziger</value>
+  <data name="lblError.Text" xml:space="preserve">
+    <value>Помилка</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>&amp;Sluiten</value>
+  <data name="lblCombineVertical.Text" xml:space="preserve">
+    <value>Об'єднати зображення
+(Вертикально)</value>
   </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>&amp;Toepassen</value>
-  </data>
-  <data name="cbAutomatic.Text" xml:space="preserve">
-    <value>Verkrijg het adres van de DNS server automatisch</value>
-  </data>
-  <data name="lblAdapters.Text" xml:space="preserve">
-    <value>Netwerkadapters:</value>
-  </data>
-  <data name="lblAlternateDNS.Text" xml:space="preserve">
-    <value>Alternatieve DNS server:</value>
-  </data>
-  <data name="lblDNS.Text" xml:space="preserve">
-    <value>DNS servers:</value>
-  </data>
-  <data name="lblPreferredDNS.Text" xml:space="preserve">
-    <value>Voorkeurs DNS server:</value>
+  <data name="lblCombineHorizontal.Text" xml:space="preserve">
+    <value>Об'єднати зображення
+(Горизонтально)</value>
   </data>
 </root>

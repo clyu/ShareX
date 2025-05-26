@@ -117,34 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="lblAlternateDNS.Text" xml:space="preserve">
-    <value>خادوم DNS البديل:</value>
+  <data name="tsbCopy.Text" xml:space="preserve">
+    <value>コピー</value>
   </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>إغلاق</value>
+  <data name="tslScale.ToolTipText" xml:space="preserve">
+    <value>拡大率</value>
   </data>
-  <data name="lblDNS.Text" xml:space="preserve">
-    <value>خواديم DNS:</value>
+  <data name="tsbOptions.Text" xml:space="preserve">
+    <value>オプション...</value>
   </data>
-  <data name="lblAdapters.Text" xml:space="preserve">
-    <value>محوّل الشبكة:</value>
-  </data>
-  <data name="cbAutomatic.Text" xml:space="preserve">
-    <value>الحصول على عنوان DNS تلقائيًا</value>
-  </data>
-  <data name="btnPingPrimary.Text" xml:space="preserve">
-    <value>اختبار الاتصال</value>
-  </data>
-  <data name="btnPingSecondary.Text" xml:space="preserve">
-    <value>اختبار الاتصال</value>
-  </data>
-  <data name="lblPreferredDNS.Text" xml:space="preserve">
-    <value>خادوم DNS المفضل:</value>
+  <data name="tsbClose.Text" xml:space="preserve">
+    <value>閉じる</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ShareX - محرر DNS</value>
-  </data>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>تطبيق</value>
+    <value>ShareX - 最前面に固定</value>
   </data>
 </root>

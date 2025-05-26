@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,34 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="btnSave.Text" xml:space="preserve">
-    <value>Appliquer</value>
-  </data>
-  <data name="btnCancel.Text" xml:space="preserve">
-    <value>Fermer</value>
-  </data>
-  <data name="lblAlternateDNS.Text" xml:space="preserve">
-    <value>Serveur DNS auxiliaire :</value>
-  </data>
-  <data name="lblDNS.Text" xml:space="preserve">
-    <value>Serveurs DNS :</value>
-  </data>
-  <data name="lblAdapters.Text" xml:space="preserve">
-    <value>Cartes réseau :</value>
-  </data>
-  <data name="cbAutomatic.Text" xml:space="preserve">
-    <value>Obtenir les adresses des serveurs DNS automatiquement</value>
-  </data>
-  <data name="lblPreferredDNS.Text" xml:space="preserve">
-    <value>Serveur DNS préféré :</value>
-  </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>ShareX - Changeur de DNS</value>
+    <value>ShareX — Посилання на сервіси</value>
   </data>
-  <data name="btnPingPrimary.Text" xml:space="preserve">
-    <value>Ping</value>
+  <data name="btnNew.Text" xml:space="preserve">
+    <value>Новий</value>
   </data>
-  <data name="btnPingSecondary.Text" xml:space="preserve">
-    <value>Ping</value>
+  <data name="lblServices.Text" xml:space="preserve">
+    <value>Сервіси:</value>
+  </data>
+  <data name="btnRemove.Text" xml:space="preserve">
+    <value>Вилучити</value>
+  </data>
+  <data name="btnReset.Text" xml:space="preserve">
+    <value>Скинути</value>
+  </data>
+  <data name="lblName.Text" xml:space="preserve">
+    <value>Назва:</value>
+  </data>
+  <data name="lblURL.Text" xml:space="preserve">
+    <value>Посилання:</value>
   </data>
 </root>

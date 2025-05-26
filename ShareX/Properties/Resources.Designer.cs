@@ -2197,16 +2197,6 @@ namespace ShareX.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap network_ip {
-            get {
-                object obj = ResourceManager.GetObject("network_ip", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap nl {
             get {
                 object obj = ResourceManager.GetObject("nl", resourceCulture);
@@ -2578,6 +2568,26 @@ namespace ShareX.Properties {
         internal static string SwitchToThumbnailView {
             get {
                 return ResourceManager.GetString("SwitchToThumbnailView", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tag__minus {
+            get {
+                object obj = ResourceManager.GetObject("tag__minus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tag_hash {
+            get {
+                object obj = ResourceManager.GetObject("tag_hash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
